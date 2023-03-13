@@ -1,6 +1,6 @@
 # Site settings
-title: "Jekyll Resume Template"
-description: "A resume template for Jekyll and GitHub Pages sites."
+title: "Yuxin Li"
+description: "A resume of Yuxin Li."
 
 # Build settings
 markdown: kramdown
@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Yuxin Li"
-resume_title:                   "Postgraduate student in Data Science in University College London"
+resume_title:                   "MSc in Data Science in University College London"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "uczciay@ucl.ac.uk"
@@ -49,7 +49,7 @@ resume_social_links:
   resume_twitter_url:           "http://twitter.com/jglovier"
   resume_dribbble_url:          "https://dribbble.com/jag"
   # resume_facebook_url:          "insert Facebook URL here"
-  resume_linkedin_url:          "https://www.linkedin.com/in/joelglovier"
+  resume_linkedin_url:          "https://www.linkedin.com/in/yuxin-li-73a326242/"
   # resume_instagram_url:         "insert your Instagram URL here"
   resume_website_url:           "http://joelglovier.com"
   resume_medium_url:            "https://medium.com/@jglovier"
