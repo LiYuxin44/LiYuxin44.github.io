@@ -1,16 +1,36 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
+# 
+- project: Research on Security Mechanism of Educational Resource Recommendation Based on Graph Convolutional Neural Network
+  role: Research Assistant
+  duration: 2022 &mdash; 2023
   # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+  description: [National Natural Science Foundation Project No: 62177046] Proposed a defensive method for convolution graph node representation based on Gaussian distribution and neighborhood node representation based on variance attention mechanism.
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
+# 
+- project: Research on Public Opinion Prediction Based on Sentiment Dictionary and Blockchain Technology 
   role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
+  duration: 2021 &mdash; 2022
   # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+  description: Hunan Natural Science Foundation Project No: 2021JJ30866SCOG] Construct a polar sentiment dictionary with explicit sentiment based on a basic sentiment dictionary and combine with machine learning to improve the sentiment convergence of opinion data.
+  
+  # 
+- project: Heart Rate Detection Based on Millimeter Wave Radar Signal
+  role: Research Assistant
+  duration: 2022 &mdash; 2022
+  # url: "#"
+  description: •Acquired millimeter wave radar signals and data pre-processing with Python.
+• Proposed a new heart rate detection method based on millimeter wave radar signals and improved efficiency by 25%.
+• Designed and implemented a UI interface to display heart rate detection based on millimeter wave radar, including the
+published heart rate detection methods based on millimeter wave radar in recent years
+
+ # 
+- project: Heart Rate Detection Based on Millimeter Wave Radar Signal
+  role: Research Assistant
+  duration: 2022 &mdash; 2022
+  # url: "#"
+  description: •Acquired millimeter wave radar signals and data pre-processing with Python.
+• Proposed a new heart rate detection method based on millimeter wave radar signals and improved efficiency by 25%.
+• Designed and implemented a UI interface to display heart rate detection based on millimeter wave radar, including the
+published heart rate detection methods based on millimeter wave radar in recent years
