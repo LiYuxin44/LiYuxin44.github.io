@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Yuxin Li is a PhD student at Nanyang Technological University, supervised by Prof. Cuntai Guan and Prof. Eng Siong Cheng.
+Yuxin Li is a PhD student at Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023) and [Prof. Eng Siong Cheng](https://dr.ntu.edu.sg/cris/rp/rp00098).
 
 Before joining NTU, she obtained her Master's degree in Data Science from the University College London in 2022, where she was supervised by Dr. Danniel Onah and is an active member of the AI research group. She received her Bachelor's degree from Central South University, where she began her research journey with Prof. Chao Hu's team.
 
