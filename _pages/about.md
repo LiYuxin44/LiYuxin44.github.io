@@ -7,7 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+Yuxin Li is a PhD student at Nanyang Technological University, supervised by Prof. Cuntai Guan and Prof. Eng Siong Cheng.
+
+Before joining NTU, she obtained her Master's degree in Data Science from the University College London in 2022, where she was supervised by Dr. Danniel Onah and was an active member of the AI research group. She received her Bachelor's degree from Central South University (中南大学), where she began her research journey under Prof. Chao Hu.
+
+Her work focuses on paralinguistics, speech recognition, deep learning, and mental health. In her research, she explores how to scale the integration of mental health and AI, with a particular emphasis on developing foundational models for mental health detection.
 
 News
 ======
