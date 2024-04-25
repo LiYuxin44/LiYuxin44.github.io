@@ -9,7 +9,7 @@ redirect_from:
 
 Yuxin Li is a PhD student at Nanyang Technological University, supervised by Prof. Cuntai Guan and Prof. Eng Siong Cheng.
 
-Before joining NTU, she obtained her Master's degree in Data Science from the University College London in 2022, where she was supervised by Dr. Danniel Onah and was an active member of the AI research group. She received her Bachelor's degree from Central South University (中南大学), where she began her research journey under Prof. Chao Hu.
+Before joining NTU, she obtained her Master's degree in Data Science from the University College London in 2022, where she was supervised by Dr. Danniel Onah and is an active member of the AI research group. She received her Bachelor's degree from Central South University, where she began her research journey with Prof. Chao Hu's team.
 
 Her work focuses on paralinguistics, speech recognition, deep learning, and mental health. In her research, she explores how to scale the integration of mental health and AI, with a particular emphasis on developing foundational models for mental health detection.
 
