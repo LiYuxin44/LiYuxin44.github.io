@@ -41,6 +41,26 @@ Apr 2021 - Apr 2022<br />
 Research Assistant<br />
 </font>
 </p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### Nanyang Technological University
+<p style="line-height:1.0">
+<font size="2">
+Aug 2022 - Present<br />
+Ph.D. student at MMLab@NTU<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### Nanyang Technological University
+<p style="line-height:1.0">
+<font size="2">
+Aug 2018 - May 2022<br />
+B.E. in Information Engineering & Media<br />
+<strong>CGPA: 5.00 / 5.00 (ranking: 1)</strong>
+</font>
+</p>
+
 
 Publications
 ======
