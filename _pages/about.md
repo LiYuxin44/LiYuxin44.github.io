@@ -49,8 +49,6 @@ IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI
 </p>
 -----
 <img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
------
-<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
 ### False Data Injection Attack Detection of Cyber-Physical Charging Systems Based on Time-Frequency Analysis
 <p style="line-height:1.0">
 <font size="2">
@@ -60,8 +58,6 @@ IEEE Conference on Smart Electrical Grid and Renewable Energy (<strong>SEGRE</st
 <br />
 </font>
 </p>
------
-<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
 
 Work Experience
 ======
@@ -94,8 +90,8 @@ Research Assistant<br />
 
 Teaching
 ======
-∙ Teaching Assistant: INST0002 Python Programming, UCL, 2023 Spring
-∙ Teaching Assistant: INST0004 Java Programming, UCL, 2022 Fall
+∙ Teaching Assistant: INST0002 Python Programming, UCL, 2023 Spring<br />
+∙ Teaching Assistant: INST0004 Java Programming, UCL, 2022 Fall<br />
 
 
 For more info
