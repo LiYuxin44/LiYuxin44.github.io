@@ -15,6 +15,7 @@ Her work focuses on paralinguistics, speech recognition, deep learning, and ment
 
 Work Experience
 ======
+-----
 <img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
 ### Nanyang Technological University
 <p style="line-height:1.0">
