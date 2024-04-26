@@ -7,34 +7,95 @@ redirect_from:
   - /about.html
 ---
 
-Yuxin Li is a PhD student at Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023) and [Prof. Eng Siong Cheng](https://dr.ntu.edu.sg/cris/rp/rp00098).
+Yuxin Li is a PhD student at Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023) and [Prof. Eng Siong Cheng](https://dr.ntu.edu.sg/cris/rp/rp00098). She also works as a Research Assistant in Prof. Guan's lab.
 
-Before joining NTU, she obtained her Master's degree in Data Science from the University College London in 2022, where she was supervised by Dr. Danniel Onah and is an active member of the AI research group. She received her Bachelor's degree from Central South University, where she began her research journey with Prof. Chao Hu's team.
+Before joining NTU, she obtained her Master's degree in Data Science from the [University College London](https://www.ucl.ac.uk/), where she was supervised by [Dr. Danniel Onah](https://profiles.ucl.ac.uk/62731-daniel-onah/publications) and is an active member of his AI research group. She received her Bachelor's degree from [Central South University](https://en.csu.edu.cn/), where she began her research journey with [Prof. Chao Hu](https://faculty.csu.edu.cn/huchao/zh_CN/index.htm)'s team.
 
 Her work focuses on paralinguistics, speech recognition, deep learning, and mental health. In her research, she explores how to scale the integration of mental health and AI, with a particular emphasis on developing foundational models for mental health detection.
 
-News
-======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
-
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
-
 Publications
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+<img style="float: left; margin:5px 10px" src="../images/paper_teasers/vbench_cropped.jpg" width="160" height="140">
+### Research on Bidirectional Recurrent Neural Network in Speech Recognition
+<p style="line-height:1.0">
+<font size="2">
+Xun Chen, Chengqi Wang, <strong>Yuxin Li</strong>, Chao Hu, Qin Wang, Dupeng Cai <br />
+IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI</strong>), 2023 <br />
+<a href="https://ieeexplore.ieee.org/abstract/document/10331975">Paper</a> | 
+<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/paper_teasers/vbench_cropped.jpg" width="160" height="140">
+### Research on Bidirectional Recurrent Neural Network in Speech Recognition
+<p style="line-height:1.0">
+<font size="2">
+Xun Chen, Chengqi Wang, <strong>Yuxin Li</strong>, Chao Hu, Qin Wang, Dupeng Cai <br />
+IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI</strong>), 2023 <br />
+<a href="https://ieeexplore.ieee.org/abstract/document/10331975">Paper</a> | 
+<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
+### Stock Price Forecast Based on Dueling Deep Recurrent Q-network
+<p style="line-height:1.0">
+<font size="2">
+Xun Chen, Qin Wang, <strong>Li Yuxin</strong>, Chao Hu, Chengqi Wang, Qichen Yan<br />
+IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI</strong>), 2023 <br />
+<a href="https://ieeexplore.ieee.org/abstract/document/10332127">Paper</a> | 
+<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
+-----
+<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
+### False Data Injection Attack Detection of Cyber-Physical Charging Systems Based on Time-Frequency Analysis
+<p style="line-height:1.0">
+<font size="2">
+Chao Hu, Peishun Fan, <strong>Yuxin Li</strong>, I-Ju Chiu, Yibin Wang, Yiquan Zhou, Yi Li, Heng Li<br />
+IEEE Conference on Smart Electrical Grid and Renewable Energy (<strong>SEGRE</strong>), 2023 <br />
+<a href="https://ieeexplore.ieee.org/abstract/document/10269239/authors#authors">Paper</a> | 
+<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
 
 Work Experience
 ======
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### Nanyang Technological University
+<p style="line-height:1.0">
+<font size="2">
+June 2024 - Present<br />
+Research Assistant at CBCR@NTU<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### University College London
+<p style="line-height:1.0">
+<font size="2">
+Sep 2022 - Mar 2023<br />
+Senior PGTA<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### Central South University
+<p style="line-height:1.0">
+<font size="2">
+Apr 2021 - Apr 2022<br />
+Research Assistant<br />
+</font>
+</p>
 
 Teaching
 ======
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+∙ Teaching Assistant: INST0002 Python Programming, UCL, 2023 Spring
+∙ Teaching Assistant: INST0004 Java Programming, UCL, 2022 Fall
 
 
 For more info
