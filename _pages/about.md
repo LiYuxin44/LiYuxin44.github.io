@@ -13,6 +13,35 @@ Before joining NTU, she obtained her Master's degree in Data Science from the [U
 
 Her work focuses on paralinguistics, speech recognition, deep learning, and mental health. In her research, she explores how to scale the integration of mental health and AI, with a particular emphasis on developing foundational models for mental health detection.
 
+Work Experience
+======
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### Nanyang Technological University
+<p style="line-height:1.0">
+<font size="2">
+June 2024 - Present<br />
+Research Assistant at CBCR@NTU<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### University College London
+<p style="line-height:1.0">
+<font size="2">
+Sep 2022 - Mar 2023<br />
+Senior PGTA<br />
+</font>
+</p>
+-----
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+### Central South University
+<p style="line-height:1.0">
+<font size="2">
+Apr 2021 - Apr 2022<br />
+Research Assistant<br />
+</font>
+</p>
+
 Publications
 ======
 <img style="float: left; margin:5px 10px" src="../images/paper_teasers/vbench_cropped.jpg" width="160" height="140">
@@ -59,34 +88,11 @@ IEEE Conference on Smart Electrical Grid and Renewable Energy (<strong>SEGRE</st
 </font>
 </p>
 
-Work Experience
+Patent
 ======
-<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
-### Nanyang Technological University
-<p style="line-height:1.0">
-<font size="2">
-June 2024 - Present<br />
-Research Assistant at CBCR@NTU<br />
-</font>
-</p>
------
-<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
-### University College London
-<p style="line-height:1.0">
-<font size="2">
-Sep 2022 - Mar 2023<br />
-Senior PGTA<br />
-</font>
-</p>
------
-<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
-### Central South University
-<p style="line-height:1.0">
-<font size="2">
-Apr 2021 - Apr 2022<br />
-Research Assistant<br />
-</font>
-</p>
+
+Talk
+======
 
 Teaching
 ======
