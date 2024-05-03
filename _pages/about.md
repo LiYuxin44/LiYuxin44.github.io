@@ -44,7 +44,6 @@ Research Assistant<br />
 
 Publications
 ======
-<img style="float: left; margin:5px 10px" src="../images/paper_teasers/vbench_cropped.jpg" width="160" height="140">
 ### Research on Bidirectional Recurrent Neural Network in Speech Recognition
 <p style="line-height:1.0">
 <font size="2">
