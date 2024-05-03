@@ -15,6 +15,7 @@ Her work focuses on paralinguistics, speech recognition, deep learning, and ment
 
 Recent News
 ======
+-----
 ∙ [2024-08] Join CBCR Center as Ph.D student.<br />
 ∙ [2024-06] Join CBCR Center as Research Assistant.<br />
 ∙ [2024-05] Two papers accepted to ISSRE 2024.<br />
@@ -25,6 +26,7 @@ Recent News
 
 Work Experience
 ======
+-----
 ### Nanyang Technological University
 <p style="line-height:1.0">
 <font size="2">
@@ -86,13 +88,16 @@ IEEE Conference on Smart Electrical Grid and Renewable Energy (<strong>SEGRE</st
 
 Patent
 ======
+-----
 
 Talk
 ======
+-----
 ### Invited talk at AI Research Group”
 
 Teaching
 ======
+-----
 ∙ Teaching Assistant: INST0002 Python Programming, UCL, 2023 Spring<br />
 ∙ Teaching Assistant: INST0004 Java Programming, UCL, 2022 Fall<br />
 
