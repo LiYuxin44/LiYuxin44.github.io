@@ -1,4 +1,4 @@
-![image](https://github.com/LiYuxin44/LiYuxin44.github.io/assets/99376691/4b06351b-4717-4528-8c5a-6f2967ba75a1)---
+---
 permalink: /
 title: "Yuxin Li"
 author_profile: true
