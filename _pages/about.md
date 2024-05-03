@@ -53,15 +53,6 @@ Research Assistant<br />
 
 Publications
 ======
-### Research on Bidirectional Recurrent Neural Network in Speech Recognition
-<p style="line-height:1.0">
-<font size="2">
-Xun Chen, Chengqi Wang, <strong>Yuxin Li</strong>, Chao Hu, Qin Wang, Dupeng Cai <br />
-IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI</strong>), 2023 <br />
-<a href="https://ieeexplore.ieee.org/abstract/document/10331975">Paper</a> | 
-<br />
-</font>
-</p>
 -----
 ### [Research on Bidirectional Recurrent Neural Network in Speech Recognition](https://ieeexplore.ieee.org/abstract/document/10331975)
 <p style="line-height:1.0">
