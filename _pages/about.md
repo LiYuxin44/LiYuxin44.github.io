@@ -16,8 +16,8 @@ Her work focuses on paralinguistics, speech recognition, deep learning, and ment
 Recent News
 ======
 -----
-∙ [2024-08] Join Center of CBCR@NTU as Ph.D student.<br />
-∙ [2024-06] Join Center of CBCR@NTU as Research Assistant.<br />
+∙ [2024-08] Joined Center of CBCR@NTU as Ph.D student.<br />
+∙ [2024-06] Joined Center of CBCR@NTU as Research Assistant.<br />
 ∙ [2024-05] Two papers accepted to ISSRE 2024.<br />
 ∙ [2024-03] Invited talk at UCL AI Research Group.<br />
 ∙ [2023-06] Two paper accepted to PRAI 2023.<br />
