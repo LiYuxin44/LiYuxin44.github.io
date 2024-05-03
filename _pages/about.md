@@ -15,7 +15,7 @@ Her work focuses on paralinguistics, speech recognition, deep learning, and ment
 
 Work Experience
 ======
-<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
+
 ### Nanyang Technological University
 <p style="line-height:1.0">
 <font size="2">
@@ -24,7 +24,7 @@ Research Assistant at CBCR@NTU<br />
 </font>
 </p>
 -----
-<img style="float: left; margin:5px 10px" src="../images/UCL_logo.png" width="160" height="140">
+
 ### University College London
 <p style="line-height:1.0">
 <font size="2">
@@ -33,7 +33,7 @@ Senior PGTA<br />
 </font>
 </p>
 -----
-<img style="float: left; margin:5px 10px" src="../images/CSU_logo.png" width="160" height="140">
+
 ### Central South University
 <p style="line-height:1.0">
 <font size="2">
@@ -55,7 +55,6 @@ IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI
 </font>
 </p>
 -----
-<img style="float: left; margin:5px 10px" src="../images/paper_teasers/vbench_cropped.jpg" width="160" height="140">
 ### Research on Bidirectional Recurrent Neural Network in Speech Recognition
 <p style="line-height:1.0">
 <font size="2">
@@ -66,7 +65,6 @@ IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI
 </font>
 </p>
 -----
-<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
 ### Stock Price Forecast Based on Dueling Deep Recurrent Q-network
 <p style="line-height:1.0">
 <font size="2">
@@ -77,7 +75,6 @@ IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI
 </font>
 </p>
 -----
-<img style="float: left; margin:5px 10px" src="../images/paper_teasers/freeu_teaser.jpg" width="160" height="140">
 ### False Data Injection Attack Detection of Cyber-Physical Charging Systems Based on Time-Frequency Analysis
 <p style="line-height:1.0">
 <font size="2">
