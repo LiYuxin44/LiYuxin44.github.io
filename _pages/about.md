@@ -26,7 +26,7 @@ Recent News
 
 
 
-Work Experience
+Education
 ======
 -----
 <img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
@@ -34,7 +34,6 @@ Work Experience
 <p style="line-height:1.0">
 <font size="2">
 June 2024 - Present<br />
-Research Assistant at CBCR@NTU<br />
 </font>
 </p>
 -----
@@ -42,17 +41,16 @@ Research Assistant at CBCR@NTU<br />
 ### University College London
 <p style="line-height:1.0">
 <font size="2">
-Sep 2022 - Mar 2023<br />
-Senior PGTA<br />
+Sep 2022 - Oct 2023<br />
 </font>
 </p>
+
 -----
 <img style="float: left; margin:5px 10px" src="../images/CSU_logo.png" width="160" height="140">
 ### Central South University
 <p style="line-height:1.0">
 <font size="2">
-Apr 2021 - Apr 2022<br />
-Research Assistant<br />
+Sep 2018 - Jul 2022<br />
 </font>
 </p>
 
