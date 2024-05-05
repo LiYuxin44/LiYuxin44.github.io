@@ -29,7 +29,7 @@ Recent News
 Education
 ======
 -----
-<img style="float: left; margin:2px 2px" src="../images/NTU_logo.png" width="140" height="120">
+<img style="float: left; margin:2px 2px" src="../images/NTU_logo.png" width="90" height="90">
 ### Nanyang Technological University
 <p style="line-height:1.0">
 <font size="2">
