@@ -37,20 +37,22 @@ June 2024 - Present<br />
 </font>
 </p>
 -----
-<img style="float: left; margin:15px 20px" src="../images/UCL_logo.png" width="160" height="140">
+<img style="float: left; margin:5px 10px" src="../images/UCL_logo.png" width="100" height="100">
 ### University College London
 <p style="line-height:1.0">
 <font size="2">
 Sep 2022 - Oct 2023<br />
+
 </font>
 </p>
 
 -----
-<img style="float: left; margin:15px 20px" src="../images/CSU_logo.png" width="160" height="140">
+<img style="float: left; margin:5px 10px" src="../images/CSU_logo.png" width="100" height="100">
 ### Central South University
 <p style="line-height:1.0">
 <font size="2">
 Sep 2018 - Jul 2022<br />
+
 </font>
 </p>
 
