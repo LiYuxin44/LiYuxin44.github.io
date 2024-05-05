@@ -16,17 +16,20 @@ Her work focuses on paralinguistics, speech recognition, deep learning, and ment
 Recent News
 ======
 -----
-∙ [2024-08] Joined Center of CBCR@NTU as Ph.D student.<br />
-∙ [2024-06] Joined Center of CBCR@NTU as Research Assistant.<br />
-∙ [2024-05] Two papers accepted to ISSRE 2024.<br />
+∙ [2024-08] Joined Center of [CBCR@NTU](https://ntu-cbcr.org/) as Ph.D student.<br />
+∙ [2024-06] Joined Center of [CBCR@NTU](https://ntu-cbcr.org/) as Research Assistant.<br />
+∙ [2024-05] Two papers accepted to [ISSRE 2024](https://easychair.org/cfp/ISSRE2024).<br />
 ∙ [2024-03] Invited talk at UCL AI Research Group.<br />
-∙ [2023-06] Two paper accepted to PRAI 2023.<br />
+∙ [2023-10] We are organizing [2023 China-UK Technology Summit](https://www.chinadaily.com.cn/a/202310/16/WS652c36f1a31090682a5e8a07.html). <br />
+∙ [2023-06] Two paper accepted to [PRAI 2023](https://ieeexplore.ieee.org/xpl/conhome/10330801/proceeding).<br />
+∙ [2023-06] One paper accepted to [SEGRE 2023](https://www.computer.org/csdl/proceedings/segre/2023/1R1uHxcCyCk).<br />
 
 
 
 Work Experience
 ======
 -----
+<img style="float: left; margin:5px 10px" src="../images/NTU_logo.png" width="160" height="140">
 ### Nanyang Technological University
 <p style="line-height:1.0">
 <font size="2">
@@ -35,7 +38,7 @@ Research Assistant at CBCR@NTU<br />
 </font>
 </p>
 -----
-
+<img style="float: left; margin:5px 10px" src="../images/UCL_logo.png" width="160" height="140">
 ### University College London
 <p style="line-height:1.0">
 <font size="2">
@@ -44,7 +47,7 @@ Senior PGTA<br />
 </font>
 </p>
 -----
-
+<img style="float: left; margin:5px 10px" src="../images/CSU_logo.png" width="160" height="140">
 ### Central South University
 <p style="line-height:1.0">
 <font size="2">
