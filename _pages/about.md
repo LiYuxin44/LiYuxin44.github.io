@@ -91,14 +91,6 @@ IEEE Conference on Smart Electrical Grid and Renewable Energy (<strong>SEGRE</st
 </font>
 </p>
 
-Patent
-======
------
-
-Talk
-======
------
-### Invited talk at AI Research Group”
 
 Teaching
 ======
