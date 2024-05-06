@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Hi! This is Yuxin Li :)"
+title                    : "Yuxin :)"
 title_separator          : "-"
 name                     : &name "Yuxin Li"
 description              : &description "PhD Student at Nanyang Technological University"
@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "NTU_logo.png"
   name             : "Yuxin Li 李雨昕"
   pronouns         : # example: "she/her"  
   bio              : "PhD Student at Nanyang Technological Univeristy"
