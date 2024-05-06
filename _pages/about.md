@@ -33,24 +33,26 @@ Education
 ### Nanyang Technological University
 <p style="line-height:1.0">
 <font size="2">
+Ph.D. student<br />
 June 2024 - Present<br />
 </font>
 </p>
 -----
-<img style="float: left; margin:1px 1px" src="../images/UCL_logo.png" width="80" height="80">
+<img style="float: left; margin:1px 5px 1px 1px" src="../images/UCL_logo.png" width="80" height="80">
 ### University College London
 <p style="line-height:1.0">
 <font size="2">
+Master's Degree <strong>Distinction Degree (Top 3)</strong><br />
 Sep 2022 - Oct 2023<br />
-
 </font>
 </p>
 
 -----
-<img style="float: left; margin:1px 1px" src="../images/CSU_logo.png" width="80" height="80">
+<img style="float: left; margin:1px 5px 1px 1px" src="../images/CSU_logo.png" width="80" height="80">
 ### Central South University
 <p style="line-height:1.0">
 <font size="2">
+Bachelor's Degree<br />
 Sep 2018 - Jul 2022<br />
 
 </font>
