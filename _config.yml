@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "NTU_logo.png"
+  avatar           : "profile.png"
   name             : "Yuxin Li 李雨昕"
   pronouns         : # example: "she/her"  
   bio              : "PhD Student at Nanyang Technological Univeristy"
