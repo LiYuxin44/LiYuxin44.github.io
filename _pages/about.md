@@ -16,8 +16,7 @@ Her work focuses on paralinguistics, speech recognition, deep learning, and ment
 Recent News
 ======
 -----
-∙ [2024-08] Joined Center of [CBCR@NTU](https://ntu-cbcr.org/) as Ph.D student.<br />
-∙ [2024-06] Joined Center of [CBCR@NTU](https://ntu-cbcr.org/) as Research Assistant.<br />
+
 ∙ [2024-05] Two papers accepted to [ISSRE 2024](https://easychair.org/cfp/ISSRE2024).<br />
 ∙ [2024-03] Invited talk at UCL AI Research Group.<br />
 ∙ [2023-10] We are organizing [2023 China-UK Technology Summit](https://www.chinadaily.com.cn/a/202310/16/WS652c36f1a31090682a5e8a07.html). <br />
