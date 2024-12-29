@@ -33,7 +33,7 @@ Education
 <p style="line-height:1.0">
 <font size="2">
 Ph.D. student<br />
-June 2024 - Present<br />
+August 2024 - Present<br />
 </font>
 </p>
 -----
