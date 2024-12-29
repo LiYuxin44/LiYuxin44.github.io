@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 -----
-Yuxin Li is a PhD student at Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023) and [Prof. Eng Siong Cheng](https://dr.ntu.edu.sg/cris/rp/rp00098). She also works as a Research Assistant in Prof. Guan's lab.
+Yuxin Li is a PhD student at Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023). She also works as a Research Assistant in Prof. Guan's lab.
 
 Before joining NTU, she obtained her Master's degree in Data Science from the [University College London](https://www.ucl.ac.uk/), where she was supervised by [Dr. Danniel Onah](https://profiles.ucl.ac.uk/62731-daniel-onah/publications) and is an active member of his AI research group. She received her Bachelor's degree from [Central South University](https://en.csu.edu.cn/), where she began her research journey with [Prof. Chao Hu](https://faculty.csu.edu.cn/huchao/zh_CN/index.htm)'s team.
 
@@ -17,7 +17,7 @@ Recent News
 ======
 -----
 
-∙ [2024-05] Two papers accepted to [ISSRE 2024](https://easychair.org/cfp/ISSRE2024).<br />
+∙ [2024-05] One papers accepted to [ISSRE 2024](https://easychair.org/cfp/ISSRE2024).<br />
 ∙ [2024-03] Invited talk at UCL AI Research Group.<br />
 ∙ [2023-10] We are organizing [2023 China-UK Technology Summit](https://www.chinadaily.com.cn/a/202310/16/WS652c36f1a31090682a5e8a07.html). <br />
 ∙ [2023-06] Two paper accepted to [PRAI 2023](https://ieeexplore.ieee.org/xpl/conhome/10330801/proceeding).<br />
