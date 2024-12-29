@@ -60,6 +60,16 @@ Sep 2018 - Jul 2022<br />
 Publications
 ======
 -----
+### [Leveraging large language models and BERT for log parsing and anomaly detection](https://dr.ntu.edu.sg/bitstream/10356/181426/2/mathematics-12-02758-v2.pdf)
+<p style="line-height:1.0">
+<font size="2">
+Zhou, Yihan; Chen, Yan; Rao, Xuanming; Zhou, Yukang; <strong>Li, Yuxin</strong>strong>; Hu, Chao<br />
+(<strong>Mathematics</strong>), 2024 <br />
+
+<br />
+</font>
+</p>
+-----
 ### [Research on Bidirectional Recurrent Neural Network in Speech Recognition](https://ieeexplore.ieee.org/abstract/document/10331975)
 <p style="line-height:1.0">
 <font size="2">
