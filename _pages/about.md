@@ -64,7 +64,7 @@ Publications
 <p style="line-height:1.0">
 <font size="2">
 Zhou, Yihan; Chen, Yan; Rao, Xuanming; Zhou, Yukang; <strong>Li, Yuxin</strong>strong>; Hu, Chao<br />
-(<strong>Mathematics</strong>), 2024 <br />
+<strong>Mathematics</strong>, 2024 <br />
 
 <br />
 </font>
