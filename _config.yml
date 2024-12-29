@@ -12,7 +12,7 @@ title                    : "Yuxin :)"
 title_separator          : "-"
 name                     : &name "Yuxin Li"
 description              : &description "PhD Student at Nanyang Technological University"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://liyuxin44.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 
@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Yuxin Li 李雨昕"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Research Student at SCSE@NTU"
+  bio              : "PhD Research Student at CCDS@NTU"
   location         : "Singapore"
   employer         : #"Nanyang Technological University"
   uri              : # URL
