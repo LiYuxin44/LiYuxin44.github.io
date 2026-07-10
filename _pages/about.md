@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 -----
-Yuxin Li is a PhD candidate at the College of Computing and Data Science, Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023). She is currently a Research Scientist Intern at [StepFun](https://www.stepfun.com/), where she is a core contributor to the **Step-Audio 2 / R1 / R1.5** audio foundation models.
+Yuxin Li is a PhD candidate at the College of Computing and Data Science, Nanyang Technological University, advised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023) and [Prof. Eng Siong Chng](https://dr.ntu.edu.sg/cris/rp/rp00048). She is currently an Audio LLM Research Intern at [Anuttacon](https://www.anuttacon.com/). Previously, she was a Research Scientist Intern at [StepFun](https://www.stepfun.com/), where she was a core contributor to the **Step-Audio 2 / R1 / R1.5** audio foundation models.
 
 Before joining NTU, she obtained her Master's degree in Knowledge, Information and Data Science from [University College London](https://www.ucl.ac.uk/), where she was supervised by [Dr. Daniel Onah](https://profiles.ucl.ac.uk/62731-daniel-onah/publications). She received her Bachelor's degree from [Central South University](https://en.csu.edu.cn/), where she began her research journey with [Prof. Chao Hu](https://faculty.csu.edu.cn/huchao/zh_CN/index.htm)'s team.
 
@@ -17,9 +17,12 @@ Recent News
 ======
 -----
 
+∙ [2026-07] Joined **Anuttacon** as an Audio LLM Research Intern.<br />
 ∙ [2026-01] Our paper *The Silent Thought* was accepted to **ICML 2026**.<br />
 ∙ [2025-11] **Step-Audio-R1** Technical Report released (core author).<br />
+∙ [2025-10] New preprint: *Hierarchical Self-Supervised Representation Learning for Depression Detection from Speech*.<br />
 ∙ [2025-07] **Step-Audio 2** Technical Report released (core author).<br />
+∙ [2025-06] Our systematic review on *Automated Depression Detection from Text and Audio* was accepted to **IEEE JBHI**.<br />
 ∙ [2025-04] Joined **StepFun** as a Research Scientist Intern.<br />
 ∙ [2024-05] One paper accepted to [ISSRE 2024](https://easychair.org/cfp/ISSRE2024).<br />
 ∙ [2023-10] We are organizing [2023 China-UK Technology Summit](https://www.chinadaily.com.cn/a/202310/16/WS652c36f1a31090682a5e8a07.html). <br />
@@ -29,7 +32,8 @@ Recent News
 Experience
 ======
 -----
-∙ **Research Scientist Intern**, StepFun — Apr 2025 – Present<br />
+∙ **Audio LLM Research Intern**, Anuttacon — Jul 2026 – Present<br />
+∙ **Research Scientist Intern**, StepFun — Apr 2025 – Jun 2026<br />
 ∙ **Research Intern**, Speech Lab, Nanyang Technological University — Dec 2023 – Jun 2024<br />
 ∙ **Research Assistant**, University College London — Jan 2023 – Jun 2023<br />
 ∙ **Research Assistant**, Central South University — Apr 2021 – Dec 2022<br />
@@ -68,6 +72,15 @@ Sep 2018 - Jul 2022<br />
 
 Selected Publications
 ======
+-----
+### Automated Depression Detection from Text and Audio: A Systematic Review
+<p style="line-height:1.0">
+<font size="2">
+<strong>Yuxin Li</strong>, Sujeeth Kumbale, Yan Chen, Tanvi Surana, Eng Siong Chng, Cuntai Guan<br />
+<strong>IEEE Journal of Biomedical and Health Informatics (JBHI)</strong>, 2025 <br />
+<br />
+</font>
+</p>
 -----
 ### Decoupling Conversational Dynamics in Full-Duplex Spoken Models through Reinforcement Learning
 <p style="line-height:1.0">

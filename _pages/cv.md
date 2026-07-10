@@ -18,13 +18,16 @@ construction, evaluation, and research-to-system iteration.
 
 Education
 ======
-* Ph.D., College of Computing and Data Science, **Nanyang Technological University**, Aug 2024 – Present (GPA: 4.67/5.0)
+* Ph.D., College of Computing and Data Science, **Nanyang Technological University**, Aug 2024 – Present (GPA: 4.67/5.0) — advised by Prof. Cuntai Guan and Prof. Eng Siong Chng
 * M.Sc., Knowledge, Information and Data Science, **University College London**, Sep 2022 – Dec 2023 (GPA: 4.0/4.0)
 * B.Mgmt., Information Management and Information System, **Central South University**, Sep 2018 – Jun 2022 (GPA: 3.6/4.0)
 
 Experience
 ======
-* **Research Scientist Intern**, StepFun (Apr 2025 – Present)
+* **Audio LLM Research Intern**, Anuttacon (Jul 2026 – Present)
+  * Research on audio large language models.
+
+* **Research Scientist Intern**, StepFun (Apr 2025 – Jun 2026)
   * *Step-Audio 2* (core author): designed end-to-end pipelines spanning multimodal CoT data construction, SFT, GRPO/DPO optimization, reward and verifier design, iterative model analysis, and benchmarking across audio reasoning, ASR, paralinguistics, and dialogue tasks.
   * *Step-Audio-R1* (core author): co-developed 32B audio reasoning models; owned the RL training (RLVR with verified rewards across math, code, logic, and audio tasks) and the iterative self-distillation data pipeline that power Modality-Grounded Reasoning Distillation (MGRD), keeping long chain-of-thought reasoning grounded in raw acoustic evidence.
   * Contributor to *Step-Audio-R1.5* and *Step-Audio 2.5 Realtime*.
