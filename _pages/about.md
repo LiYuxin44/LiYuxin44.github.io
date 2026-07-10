@@ -7,23 +7,32 @@ redirect_from:
   - /about.html
 ---
 -----
-Yuxin Li is a PhD student at Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023). She also works as a Research Assistant in [CBCR](https://ntu-cbcr.org/).
+Yuxin Li is a PhD candidate at the College of Computing and Data Science, Nanyang Technological University, supervised by [Prof. Cuntai Guan](https://dr.ntu.edu.sg/cris/rp/rp01023). She is currently a Research Scientist Intern at [StepFun](https://www.stepfun.com/), where she is a core contributor to the **Step-Audio 2 / R1 / R1.5** audio foundation models.
 
-Before joining NTU, she obtained her Master's degree in Data Science from the [University College London](https://www.ucl.ac.uk/), where she was supervised by [Dr. Danniel Onah](https://profiles.ucl.ac.uk/62731-daniel-onah/publications) and is an active member of his AI research group. She received her Bachelor's degree from [Central South University](https://en.csu.edu.cn/), where she began her research journey with [Prof. Chao Hu](https://faculty.csu.edu.cn/huchao/zh_CN/index.htm)'s team.
+Before joining NTU, she obtained her Master's degree in Knowledge, Information and Data Science from [University College London](https://www.ucl.ac.uk/), where she was supervised by [Dr. Daniel Onah](https://profiles.ucl.ac.uk/62731-daniel-onah/publications). She received her Bachelor's degree from [Central South University](https://en.csu.edu.cn/), where she began her research journey with [Prof. Chao Hu](https://faculty.csu.edu.cn/huchao/zh_CN/index.htm)'s team.
 
-Her work focuses on paralinguistics, speech recognition, deep learning, and mental health. In her research, she explores how to scale the integration of mental health and AI, with a particular emphasis on developing foundational models for mental health detection.
+Her research focuses on multimodal foundation models, audio-language modeling, and post-training (SFT / RLVR / GRPO / DPO), spanning audio reasoning, speech recognition, paralinguistics, full-duplex spoken dialogue, and mental-health detection from speech.
 
 Recent News
 ======
 -----
 
-∙ [2024-05] One papers accepted to [ISSRE 2024](https://easychair.org/cfp/ISSRE2024).<br />
-∙ [2024-03] Invited talk at UCL AI Research Group.<br />
+∙ [2026-01] Our paper *The Silent Thought* was accepted to **ICML 2026**.<br />
+∙ [2025-11] **Step-Audio-R1** Technical Report released (core author).<br />
+∙ [2025-07] **Step-Audio 2** Technical Report released (core author).<br />
+∙ [2025-04] Joined **StepFun** as a Research Scientist Intern.<br />
+∙ [2024-05] One paper accepted to [ISSRE 2024](https://easychair.org/cfp/ISSRE2024).<br />
 ∙ [2023-10] We are organizing [2023 China-UK Technology Summit](https://www.chinadaily.com.cn/a/202310/16/WS652c36f1a31090682a5e8a07.html). <br />
-∙ [2023-06] Two paper accepted to [PRAI 2023](https://ieeexplore.ieee.org/xpl/conhome/10330801/proceeding).<br />
+∙ [2023-06] Two papers accepted to [PRAI 2023](https://ieeexplore.ieee.org/xpl/conhome/10330801/proceeding).<br />
 ∙ [2023-06] One paper accepted to [SEGRE 2023](https://www.computer.org/csdl/proceedings/segre/2023/1R1uHxcCyCk).<br />
 
-
+Experience
+======
+-----
+∙ **Research Scientist Intern**, StepFun — Apr 2025 – Present<br />
+∙ **Research Intern**, Speech Lab, Nanyang Technological University — Dec 2023 – Jun 2024<br />
+∙ **Research Assistant**, University College London — Jan 2023 – Jun 2023<br />
+∙ **Research Assistant**, Central South University — Apr 2021 – Dec 2022<br />
 
 Education
 ======
@@ -32,7 +41,7 @@ Education
 ### Nanyang Technological University
 <p style="line-height:1.0">
 <font size="2">
-Ph.D. student<br />
+Ph.D. Candidate, College of Computing and Data Science<br />
 August 2024 - Present<br />
 </font>
 </p>
@@ -41,8 +50,8 @@ August 2024 - Present<br />
 ### University College London
 <p style="line-height:1.0">
 <font size="2">
-Master's Degree <strong>Distinction Degree (Top 3)</strong><br />
-Sep 2022 - Oct 2023<br />
+M.Sc. Knowledge, Information and Data Science <strong>(Distinction)</strong><br />
+Sep 2022 - Dec 2023<br />
 </font>
 </p>
 
@@ -51,55 +60,70 @@ Sep 2022 - Oct 2023<br />
 ### Central South University
 <p style="line-height:1.0">
 <font size="2">
-Bachelor's Degree<br />
+B.Mgmt. Information Management and Information System<br />
 Sep 2018 - Jul 2022<br />
 
 </font>
 </p>
 
-Publications
+Selected Publications
 ======
 -----
-### [Leveraging large language models and BERT for log parsing and anomaly detection](https://dr.ntu.edu.sg/bitstream/10356/181426/2/mathematics-12-02758-v2.pdf)
+### Decoupling Conversational Dynamics in Full-Duplex Spoken Models through Reinforcement Learning
 <p style="line-height:1.0">
 <font size="2">
-Zhou, Yihan; Chen, Yan; Rao, Xuanming; Zhou, Yukang; <strong>Li, Yuxin</strong>; Hu, Chao<br />
-<strong>Mathematics</strong>, 2024 <br />
-
+<strong>Yuxin Li</strong>, Donghang Wu, Guan-ting Lin, Hung-yi Lee, Chengwei Qin, Chen Chen, Zhehuai Chen<br />
+Under review, <strong>NeurIPS</strong>, 2026 <br />
 <br />
 </font>
 </p>
 -----
-### [Research on Bidirectional Recurrent Neural Network in Speech Recognition](https://ieeexplore.ieee.org/abstract/document/10331975)
+### ParaGraph: Semantic-Calibrated Paralinguistic via Large Audio-Language Model for Interpretable Depression Detection
 <p style="line-height:1.0">
 <font size="2">
-Xun Chen, Chengqi Wang, <strong>Yuxin Li</strong>, Chao Hu, Qin Wang, Dupeng Cai <br />
-IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI</strong>), 2023 <br />
-
+<strong>Yuxin Li</strong>, Yifei Li, Yiwen Chao, Xiangyu Zhang, Eng Siong Chng, Cuntai Guan<br />
+Submitted to <strong>EMNLP</strong>, 2026 <br />
 <br />
 </font>
 </p>
 -----
-### [Stock Price Forecast Based on Dueling Deep Recurrent Q-network](https://ieeexplore.ieee.org/abstract/document/10332127)
+### DepFlow: Disentangled Speech Generation to Mitigate Semantic Bias in Depression Detection
 <p style="line-height:1.0">
 <font size="2">
-Xun Chen, Qin Wang, <strong>Li Yuxin</strong>, Chao Hu, Chengqi Wang, Qichen Yan<br />
-IEEE Conference on Pattern Recognition and Artificial Intelligence (<strong>PRAI</strong>), 2023 <br />
-
+<strong>Yuxin Li</strong>, Xiangyu Zhang, Yifei Li, Zhiwei Guo, Haoyang Zhang, Eng Siong Chng, Cuntai Guan<br />
+Under review, <strong>IEEE TAFFC</strong>, 2026 <br />
 <br />
 </font>
 </p>
 -----
-### [False Data Injection Attack Detection of Cyber-Physical Charging Systems Based on Time-Frequency Analysis](https://ieeexplore.ieee.org/abstract/document/10269239)
+### The Silent Thought: Modeling Internal Cognition in Full-Duplex Spoken Dialogue Models via Latent Reasoning
 <p style="line-height:1.0">
 <font size="2">
-Chao Hu, Peishun Fan, <strong>Yuxin Li</strong>, I-Ju Chiu, Yibin Wang, Yiquan Zhou, Yi Li, Heng Li<br />
-IEEE Conference on Smart Electrical Grid and Renewable Energy (<strong>SEGRE</strong>), 2023 <br />
-
+Donghang Wu*, Tianyu Zhang*, <strong>Yuxin Li</strong>, Hexin Liu, Chen Chen, Eng Siong Chng, Yoshua Bengio<br />
+<strong>ICML</strong>, 2026 <br />
+<br />
+</font>
+</p>
+-----
+### [Step-Audio-R1 Technical Report](https://github.com/stepfun-ai/Step-Audio-R1)
+<p style="line-height:1.0">
+<font size="2">
+Tian, F., Zhang, X. T., Zhang, Y., Zhang, H., <strong>Li, Y.</strong>, Liu, D., ... Yu, G. — <em>core author</em><br />
+Technical Report, 2025 <br />
+<br />
+</font>
+</p>
+-----
+### [Step-Audio 2 Technical Report](https://github.com/stepfun-ai/Step-Audio2)
+<p style="line-height:1.0">
+<font size="2">
+Wu, B., Yan, C., Hu, C., Yi, C., Feng, C., Tian, F., ... <strong>Li, Y.</strong> ... Zhu, Y. — <em>core author</em><br />
+Technical Report, 2025 <br />
 <br />
 </font>
 </p>
 
+<p style="line-height:1.2"><font size="2">See the full list on the <a href="/publications/">Publications</a> page.</font></p>
 
 Teaching
 ======
@@ -107,7 +131,6 @@ Teaching
 ∙ Teaching Assistant: INST0002 Python Programming, UCL, 2023 Spring<br />
 ∙ Teaching Assistant: INST0004 Java Programming, UCL, 2022 Fall<br />
 
-
 For more info
 ------
-[CV] (cv.pdf). 
+See my full [CV](/cv/).
