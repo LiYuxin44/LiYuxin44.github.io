@@ -90,7 +90,8 @@ strong{font-weight:650}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .chip{border:1px solid var(--rule-strong);background:transparent;padding:5px 11px;border-radius:999px;font-size:13.5px;line-height:1.2}
 .chip:hover{background:var(--ink);color:var(--paper)}
-.answer{margin-top:14px;font-size:17px;line-height:1.5;max-width:70ch;min-height:1.5em;text-wrap:pretty}
+.answer{margin-top:14px;font-size:17px;line-height:1.5;max-width:70ch;text-wrap:pretty}
+.answer:empty{display:none}
 .answer .cur{display:inline-block;width:.55ch;height:1em;background:var(--agent);vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
 .answer .cur.off{display:none}
 .answer .yield{display:block;margin-top:6px;font-size:13.5px;color:var(--user)}
@@ -558,7 +559,7 @@ function renderChips(){$('#chips').innerHTML=CHIPS.map(c=>`<button type="button"
 $('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;ask(b.textContent);});
 
 /* ---------- initial state: the box is never empty ---------- */
-function seedAnswer(){$('#answer').innerHTML=`<span class="txt">${esc(PROFILE[LANG])}</span>`;}
+function seedAnswer(){$('#answer').innerHTML='';}
 document.addEventListener('visibilitychange',()=>{if(document.hidden){try{speechSynthesis.cancel();}catch(e){}if(audioEl){try{audioEl.pause();}catch(e){}}}});
 
 /* ---------- click any paper or role: the guide walks there and sums it up ---------- */
