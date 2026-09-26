@@ -87,8 +87,6 @@ strong{font-weight:650}
 .ask button:hover{text-decoration:underline;text-underline-offset:3px}
 .ask button[aria-pressed="true"]{background:var(--user);color:#fff}
 @media (max-width:720px){.ask input{font-size:16px;padding:11px 12px}.ask button{padding:0 11px}}
-.ask button.talk{touch-action:none;user-select:none;-webkit-user-select:none}
-.hint{margin-top:8px;font-size:13px;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .chip{border:1px solid var(--rule-strong);background:transparent;padding:5px 11px;border-radius:999px;font-size:13.5px;line-height:1.2}
 .chip:hover{background:var(--ink);color:var(--paper)}
@@ -204,10 +202,8 @@ h3{margin:26px 0 4px;font-size:17px;font-weight:700}
     <div class="talk">
       <form class="ask" id="askForm" autocomplete="off">
         <input id="askInput" type="text" placeholder="Ask about Yuxin's work, interest and how to reach Yuxin." aria-label="Talk to the site agent">
-        <button type="button" id="talkBtn" class="talk" aria-pressed="false" aria-label="Hold to talk">Hold to talk</button>
         <button type="submit" class="go">Send</button>
       </form>
-      <div class="hint">Type, or hold the button and speak in any language. The speech model runs in your browser; answers stay in English.</div>
       <div class="chips" id="chips"></div>
       <div class="answer" id="answer"></div>
       <div class="note" id="note" hidden></div>
@@ -585,59 +581,6 @@ for(const sel of ['#pubGroups','#xpList','#eduList']){
 
 /* ---------- notes under the box ---------- */
 function note(s){const n=$('#note');n.textContent=s;n.hidden=!s;}
-
-/* ---------- press to talk: Whisper (onnx-community/whisper-base) runs in the browser via transformers.js; any language in, English out ---------- */
-let asrPipe=null,asrLoading=null,rec=null,recChunks=[],recStream=null,recStart=0;
-function loadASR(){
-  if(asrPipe)return Promise.resolve(asrPipe);
-  if(!asrLoading){asrLoading=(async()=>{
-    note('Loading the speech model, about 80 MB, only the first time.');
-    const tf=await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.0');
-    tf.env.allowLocalModels=false;
-    const seen={};
-    asrPipe=await tf.pipeline('automatic-speech-recognition','onnx-community/whisper-base',{dtype:{encoder_model:'q8',decoder_model_merged:'q8'},progress_callback:p=>{if(p.status==='progress'&&p.file&&/\.onnx$/.test(p.file)){seen[p.file]=p.progress||0;const vals=Object.values(seen);note(`Loading the speech model: ${Math.round(vals.reduce((a,b)=>a+b,0)/Math.max(1,2))}%`);}}});
-    note('');return asrPipe;})().catch(e=>{asrLoading=null;throw e;});}
-  return asrLoading;
-}
-async function decodeTo16k(blob){
-  const buf=await blob.arrayBuffer();const AC=window.AudioContext||window.webkitAudioContext;const ac=new AC({sampleRate:16000});
-  const decoded=await ac.decodeAudioData(buf);let data=decoded.getChannelData(0);
-  if(decoded.sampleRate!==16000){const off=new OfflineAudioContext(1,Math.ceil(decoded.duration*16000),16000);const src=off.createBufferSource();src.buffer=decoded;src.connect(off.destination);src.start();const r=await off.startRendering();data=r.getChannelData(0);}
-  try{ac.close();}catch(e){}
-  return data;
-}
-const talkBtn=$('#talkBtn');
-async function startTalk(){
-  if(rec)return;
-  try{recStream=await navigator.mediaDevices.getUserMedia({audio:true});}
-  catch(e){note('The microphone is blocked here. Allow it in the browser, or type your question.');return;}
-  userActivity();
-  loadASR().catch(e=>note('The speech model could not load: '+(e&&e.message||e)+'. You can type instead.'));
-  recChunks=[];rec=new MediaRecorder(recStream);rec.ondataavailable=e=>{if(e.data&&e.data.size)recChunks.push(e.data);};rec.start();recStart=performance.now();
-  talkBtn.setAttribute('aria-pressed','true');talkBtn.textContent='Listening, release to send';setLane('user','speaking');
-}
-async function stopTalk(){
-  if(!rec)return;const r=rec;rec=null;
-  const dur=performance.now()-recStart;
-  const blob=await new Promise(res=>{r.onstop=()=>res(new Blob(recChunks,{type:r.mimeType||'audio/webm'}));try{r.stop();}catch(e){res(new Blob(recChunks));}});
-  if(recStream){recStream.getTracks().forEach(t=>t.stop());recStream=null;}
-  talkBtn.setAttribute('aria-pressed','false');talkBtn.textContent='Hold to talk';setLane('user','silent');
-  if(dur<400||!blob.size){note('Hold the button while you speak, then release.');return;}
-  note('Transcribing.');
-  try{
-    const model=await loadASR();
-    const audio=await decodeTo16k(blob);
-    const out=await model(audio,{task:'translate',chunk_length_s:30,return_timestamps:false});
-    const text=(out&&out.text||'').trim();
-    if(!text){note('I could not make out any words. Try again, a little closer to the microphone.');return;}
-    note('');$('#askInput').value=text;ask(text);
-  }catch(e){note('Transcription failed: '+(e&&e.message||e)+'. You can type instead.');}
-}
-talkBtn.addEventListener('pointerdown',e=>{e.preventDefault();talkBtn.setPointerCapture&&talkBtn.setPointerCapture(e.pointerId);startTalk();});
-for(const ev of ['pointerup','pointercancel'])talkBtn.addEventListener(ev,e=>{e.preventDefault();stopTalk();});
-talkBtn.addEventListener('contextmenu',e=>e.preventDefault());
-talkBtn.addEventListener('keydown',e=>{if((e.key===' '||e.key==='Enter')&&!e.repeat){e.preventDefault();startTalk();}});
-talkBtn.addEventListener('keyup',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();stopTalk();}});
 
 /* ---------- the guide: a small figure that walks to what the agent talks about ---------- */
 const guide=$('#guide'),bubble=guide.querySelector('.bubble');let guideTarget=null,guideHide=0;
