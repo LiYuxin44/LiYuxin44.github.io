@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Yuxin Li. PhD candidate at Nanyang Technological University working on speech and multimodal agents. Core author of Step-Audio 2, Step-Audio-R1, Step-Audio 2.5 and DuplexSLA.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Yuxin Li</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#FBFAF7; --paper-rgb:251,250,247; --ink:#141311; --ink-rgb:20,19,17; color-scheme:light; --muted:#6F6A62; --rule:#D9D3CA; --rule-strong:#141311;
+  --user:#2743F0; --user-rgb:39,67,240; --agent:#0B8F6A; --agent-rgb:11,143,106; --wash:rgba(20,19,17,.045); --link:#1B3FD6;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;font-variation-settings:"wdth" 100;padding-inline:16px;padding-block:0 48px;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--user);outline-offset:2px}
+button{font:inherit;color:inherit;cursor:pointer}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+strong{font-weight:650}
+
+.wrap{max-width:920px;margin:0 auto}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:20px;padding:14px 0;background:var(--paper);border-bottom:1px solid var(--rule)}
+.nav .name{font-weight:800;font-variation-settings:"wdth" 112;letter-spacing:-.01em;text-decoration:none;color:var(--ink);margin-right:auto}
+.nav a.lnk{text-decoration:none;font-size:15px;color:var(--ink)}
+.nav a.lnk:hover{text-decoration:underline}
+@media (max-width:720px){.nav{gap:10px 14px;flex-wrap:wrap;padding:12px 0}.nav a.lnk{font-size:14px}}
+
+/* intro */
+.intro{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:44px 0 8px;align-items:start}
+.side{display:flex;flex-direction:column;gap:14px}
+.photo{position:relative;width:220px;aspect-ratio:1;border:1px solid var(--rule-strong);background:var(--wash);overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo .mg{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:64px;font-variation-settings:"wdth" 118;letter-spacing:-.04em;color:var(--muted)}
+.photo img:not([hidden])~.mg{display:none}
+.side .cap{font-size:13px;color:var(--muted);margin-top:-6px}
+.side .links{display:flex;flex-direction:column;gap:6px;font-size:15px}
+.side .links a{color:var(--ink)}
+.side .affil{font-size:13px;color:var(--muted);line-height:1.5;border-top:1px solid var(--rule);padding-top:12px}
+.main h1{margin:0 0 4px;font-size:clamp(38px,5.4vw,60px);line-height:1;font-weight:800;font-variation-settings:"wdth" 116;letter-spacing:-.03em}
+.main .sub{margin:0 0 22px;color:var(--muted);font-size:17px}
+.main p{margin:0 0 14px;max-width:66ch;text-wrap:pretty}
+@media (max-width:720px){.intro{grid-template-columns:1fr;gap:22px;padding-top:28px}.photo{width:160px}.side{flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:16px 26px}.side .affil{border-top:0;padding-top:0;flex-basis:100%}}
+
+/* demo module */
+.demo{border:1px solid var(--rule-strong);margin-top:34px}
+.demoHd{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:10px 14px;border-bottom:1px solid var(--rule-strong);font-size:13.5px}
+.demoHd .ttl{font-weight:700}
+.demoHd .status{color:var(--muted)}
+.demoHd .status b{font-weight:600;color:var(--ink)}
+.demoHd .sp{margin-left:auto;display:flex;gap:8px}
+.tbtn{border:1px solid var(--ink);background:var(--paper);padding:4px 10px;border-radius:999px;font-size:12.5px;line-height:1.3}
+.tbtn:hover,.tbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+#guide{position:absolute;left:0;top:0;z-index:15;color:var(--ink);pointer-events:none;transition:transform .75s cubic-bezier(.3,.75,.2,1),opacity .4s}
+#guide .fig{display:block;filter:drop-shadow(0 1px 0 var(--paper))}
+#guide.hop .fig{animation:hop .55s cubic-bezier(.3,.7,.3,1)}
+@keyframes hop{0%{transform:translateY(0)}40%{transform:translateY(-10px) scale(1.06)}100%{transform:translateY(0)}}
+#guide .bubble{position:absolute;left:52px;bottom:calc(100% + 4px);width:max-content;max-width:min(380px,70vw);background:var(--paper);border:1px solid var(--rule-strong);border-radius:10px;padding:8px 11px;font-size:14px;line-height:1.4;box-shadow:0 6px 18px rgba(20,19,17,.08)}
+#guide .bubble::before{content:"";position:absolute;left:-7px;bottom:-7px;width:12px;height:12px;background:var(--paper);border-left:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);transform:rotate(45deg)}
+#guide .bubble .cur{display:inline-block;width:.5ch;height:1em;background:var(--agent);vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
+#guide .bubble .cur.off{display:none}
+#guide.flip .bubble{left:auto;right:52px}
+#guide.flip .bubble::before{left:auto;right:-7px;border-left:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);border-right:0;border-top:0}
+@media (prefers-reduced-motion: reduce){#guide{transition:none}#guide.hop .fig{animation:none}#guide .bubble .cur{animation:none}}
+.demoIntro{padding:14px 14px 0;font-size:15px;color:var(--muted);max-width:78ch}
+.demoIntro p{margin:0}
+.talk{padding:14px}
+.ask{display:flex;border:1px solid var(--ink);background:var(--paper)}
+.ask input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:17px;padding:12px 14px}
+.ask input::placeholder{color:var(--muted)}
+.ask button{border:0;border-left:1px solid var(--ink);padding:0 16px;background:transparent;white-space:nowrap}
+.ask button.go{background:var(--ink);color:var(--paper)}
+.ask button:hover{text-decoration:underline;text-underline-offset:3px}
+.ask button[aria-pressed="true"]{background:var(--user);color:#fff}
+@media (max-width:720px){.ask input{font-size:16px;padding:11px 12px}.ask button{padding:0 11px}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{border:1px solid var(--rule-strong);background:transparent;padding:5px 11px;border-radius:999px;font-size:13.5px;line-height:1.2}
+.chip:hover{background:var(--ink);color:var(--paper)}
+.answer{margin-top:14px;font-size:17px;line-height:1.5;max-width:70ch;min-height:1.5em;text-wrap:pretty}
+.answer .cur{display:inline-block;width:.55ch;height:1em;background:var(--agent);vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
+.answer .cur.off{display:none}
+.answer .yield{display:block;margin-top:6px;font-size:13.5px;color:var(--user)}
+.answer .more{display:inline-block;margin-top:6px;margin-right:14px;font-size:14px}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.answer .cur{animation:none}}
+.note{margin-top:8px;font-size:13.5px;color:var(--muted)}
+
+/* sections */
+section{padding-top:28px;margin-top:36px;border-top:1px solid var(--rule);scroll-margin-top:70px}
+h2{margin:0 0 18px;font-size:24px;line-height:1.2;font-weight:700;letter-spacing:-.015em}
+h3{margin:26px 0 4px;font-size:17px;font-weight:700}
+.tagline{margin:0 0 10px;color:var(--muted);font-size:15px}
+
+/* news */
+.news{list-style:none;margin:0;padding:0;max-width:78ch}
+.news li{display:grid;grid-template-columns:5.2em 1fr;gap:14px;padding:7px 0;font-size:16px;line-height:1.5}
+.news li b{font-weight:600;font-variant-numeric:tabular-nums;color:var(--muted)}
+.news li a{margin-left:6px}
+
+/* publications */
+.pub{display:grid;grid-template-columns:1fr auto;gap:4px 18px;padding:11px 10px;margin:0 -10px;border-radius:4px;transition:background .15s,box-shadow .15s}
+.pub{cursor:pointer}
+.pub:hover{background:var(--wash)}
+.pub.hit{background:var(--wash);box-shadow:inset 3px 0 0 var(--agent)}
+.pub .t{font-weight:650;line-height:1.35}
+.pub .au{font-size:15px;color:var(--muted);line-height:1.45}
+.pub .au b{color:var(--ink);font-weight:600}
+.pub .v{font-size:15px;font-style:italic}
+.pub .v .role{font-style:normal;color:var(--muted)}
+.pub .t,.pub .au,.pub .v{grid-column:1}
+.pub.has-fig{grid-template-columns:168px 1fr auto}
+.pub.has-fig .t,.pub.has-fig .au,.pub.has-fig .v{grid-column:2}
+.pub.has-fig .lk{grid-column:3}
+.pub .fig{grid-column:1;grid-row:1/span 3;display:grid;place-items:center;border:1px solid var(--rule);background:#fff;aspect-ratio:4/3;overflow:hidden;padding:4px}
+.pub .fig img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.pub .fig:hover{border-color:var(--rule-strong)}
+.pub .lk .vbtn{font-size:12px;letter-spacing:.02em;border:1px solid var(--rule-strong);background:var(--ink);color:var(--paper);padding:2px 7px;border-radius:3px;white-space:nowrap;line-height:inherit}
+.pub .lk .vbtn:hover{background:transparent;color:var(--ink)}
+.vid{margin:2px 0 16px;border:1px solid var(--rule-strong)}
+.vid video{display:block;width:100%;aspect-ratio:16/10;background:#000}
+.vid .cap{padding:8px 12px;font-size:13.5px;color:var(--muted)}
+.pub .lk{display:flex;flex-wrap:wrap;gap:6px;align-content:start;grid-column:2;grid-row:1/span 3;justify-content:flex-end}
+.pub .lk a{font-size:12px;letter-spacing:.02em;border:1px solid var(--rule-strong);color:var(--ink);text-decoration:none;padding:2px 7px;border-radius:3px;white-space:nowrap}
+.pub .lk a:hover{background:var(--ink);color:var(--paper)}
+@media (max-width:720px){.pub,.pub.has-fig{grid-template-columns:1fr}.pub .lk,.pub.has-fig .lk{grid-column:1;grid-row:auto;justify-content:flex-start;margin-top:4px}.pub.has-fig .t,.pub.has-fig .au,.pub.has-fig .v{grid-column:1}.pub .fig{grid-column:1;grid-row:auto;max-width:280px;width:100%}}
+.morepubs{font-size:15px;color:var(--muted);margin-top:16px}
+
+/* experience */
+.xp{list-style:none;margin:0;padding:0}
+.xp li{display:grid;grid-template-columns:9.5em 1fr;gap:6px 18px;padding:10px 10px;margin:0 -10px;border-radius:4px;line-height:1.45}
+.xp li{cursor:pointer;transition:background .15s}
+.xp li:hover{background:var(--wash)}
+.xp li.hit{background:var(--wash);box-shadow:inset 3px 0 0 var(--agent)}
+.xp .when{color:var(--muted);font-variant-numeric:tabular-nums;font-size:15px;padding-top:2px}
+.xp .org{font-weight:650}
+.xp .role{color:var(--muted)}
+.xp .d{display:block;font-size:15.5px;margin-top:2px;max-width:66ch}
+@media (max-width:720px){.xp li{grid-template-columns:1fr;gap:2px}}
+
+/* contact / footer */
+.mail{display:inline-flex;align-items:stretch;border:1px solid var(--rule-strong);margin:4px 0 14px;max-width:100%}
+.mail code{font-family:inherit;font-size:17px;padding:10px 14px;user-select:all;overflow-wrap:anywhere}
+.mail button{border:0;border-left:1px solid var(--rule-strong);background:transparent;padding:0 14px;font-size:14px}
+.mail button:hover{background:var(--ink);color:var(--paper)}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+</style>
+
+</head>
+<body id="top">
+<div class="wrap">
+  <nav class="nav">
+    <a class="name" href="#top">Yuxin Li</a>
+    <a class="lnk" href="#demo">Ask the agent</a>
+    <a class="lnk" href="#news">News</a>
+    <a class="lnk" href="#pubs">Publications</a>
+    <a class="lnk" href="#xp">Experience</a>
+    <a class="lnk" href="#contact">Contact</a>
+  </nav>
+
+  <header class="intro" id="about">
+    <div class="side">
+      <div class="photo"><img id="photo" src="photo.jpg" alt="Yuxin Li" onerror="this.hidden=true"><div class="mg" aria-hidden="true">YL</div></div>
+      <div class="cap">2026</div>
+      <div class="links">
+        <a href="#contact">Email</a>
+        <a href="https://scholar.google.com/citations?user=F4wM6KsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/LiYuxin44" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/yuxin-li-73a326242/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="affil">Nanyang Technological University. Anuttacon. StepFun. University College London.</div>
+    </div>
+    <div class="main">
+      <h1>Yuxin Li</h1>
+      <p class="sub">PhD candidate, Nanyang Technological University. Speech and multimodal agents.</p>
+              <p><strong>Yuxin Li</strong> is a PhD candidate at <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener">Nanyang Technological University</a> in Singapore, advised by <a href="https://scholar.google.com/citations?user=sg4vxPoAAAAJ" target="_blank" rel="noopener">Prof. Cuntai Guan</a> and <a href="https://scholar.google.com/citations?user=FJodrCcAAAAJ" target="_blank" rel="noopener">Prof. Eng Siong Chng</a>. Yuxin builds <strong>speech and multimodal agents</strong> that understand, reason and act through natural spoken interaction, with a focus on <strong>reinforcement learning for audio LLMs</strong>, <strong>full-duplex spoken dialogue</strong> and <strong>agentic tool use</strong>.</p>
+        <p>Yuxin is currently an Audio LLM research intern at <strong>Anuttacon</strong> (Singapore and US), building multimodal post-training for audio understanding, reasoning and tool use. Before that, at <strong>StepFun</strong>, Yuxin was a core author of <a href="https://github.com/stepfun-ai/Step-Audio2" target="_blank" rel="noopener">Step-Audio 2</a>, <a href="https://github.com/stepfun-ai/Step-Audio-R1" target="_blank" rel="noopener">Step-Audio-R1</a>, <a href="https://arxiv.org/pdf/2605.23463" target="_blank" rel="noopener">Step-Audio 2.5</a> and <a href="https://arxiv.org/abs/2605.20755" target="_blank" rel="noopener">DuplexSLA</a>. Yuxin's clinical work at NTU studies <strong>speech-based depression assessment</strong> and how to keep speech models from leaning on the words instead of the voice.</p>
+        <p>Yuxin is open to collaboration and to research roles on speech and multimodal agents. Email is the best way to reach out.</p>
+    </div>
+  </header>
+
+  <div class="demo" id="demo">
+    <div class="demoHd">
+      <span class="ttl">Ask the site agent about Yuxin's work</span>
+      <span class="status" id="brainStatus"></span>
+      <span class="sp">
+        <button type="button" class="tbtn" id="soundBtn" aria-pressed="false">Turn sound on</button>
+      </span>
+    </div>
+    <div class="demoIntro">
+      <p>Let's learn more about me!</p>
+    </div>
+    <div class="talk">
+      <form class="ask" id="askForm" autocomplete="off">
+        <input id="askInput" type="text" placeholder="Ask about Yuxin's work, interest and how to reach Yuxin." aria-label="Talk to the site agent">
+        <button type="submit" class="go">Send</button>
+      </form>
+      <div class="chips" id="chips"></div>
+      <div class="answer" id="answer"></div>
+      <div class="note" id="note" hidden></div>
+    </div>
+  </div>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news" id="newsList"></ul>
+  </section>
+
+  <section id="pubs">
+    <h2>Publications</h2>
+    <div id="pubGroups"></div>
+    <p class="morepubs">Full list on <a href="https://scholar.google.com/citations?user=F4wM6KsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>. Yuxin's name is in bold.</p>
+  </section>
+
+  <section id="xp">
+    <h2>Experience</h2>
+    <ul class="xp" id="xpList"></ul>
+    <h3>Education</h3>
+    <ul class="xp" id="eduList"></ul>
+    <h3>Academic service</h3>
+    <p style="margin:0;max-width:70ch">Reviewer for ICLR, IEEE Transactions on Affective Computing, IEEE Transactions on Neural Networks and Learning Systems, and PLOS Mental Health.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="mail"><code id="mail">yuxin.li@ntu.edu.sg</code><button type="button" id="copyBtn">Copy</button></div>
+    <p style="margin:0;max-width:66ch">Also on <a href="https://scholar.google.com/citations?user=F4wM6KsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>, <a href="https://github.com/LiYuxin44" target="_blank" rel="noopener">GitHub</a>, <a href="https://www.linkedin.com/in/yuxin-li-73a326242/" target="_blank" rel="noopener">LinkedIn</a> and <a href="https://huggingface.co/collections/stepfun-ai/step-audio-2" target="_blank" rel="noopener">Hugging Face</a>.</p>
+  </section>
+
+  <div class="foot">
+    <span>Yuxin Li, 2026.</span>
+    <span>The agent on this page runs in the browser: a small tool harness with browser text-to-speech, offline rules by default, a live model when connected.</span>
+  </div>
+</div>
+
+<div id="guide" hidden aria-live="polite">
+  <svg class="fig" viewBox="0 0 44 52" width="44" height="52" aria-hidden="true">
+    <path d="M9 22a13 13 0 0 1 26 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <rect x="5" y="19" width="7" height="10" rx="3" fill="currentColor"/><rect x="32" y="19" width="7" height="10" rx="3" fill="currentColor"/>
+    <circle cx="22" cy="22" r="11" fill="var(--paper)" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="18" cy="21" r="1.7" fill="currentColor"/><circle cx="26" cy="21" r="1.7" fill="currentColor"/>
+    <path d="M18.5 26q3.5 3 7 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M13 50v-9a9 9 0 0 1 18 0v9" fill="var(--agent)"/>
+  </svg>
+  <div class="bubble" hidden><span class="txt"></span><span class="cur off"></span></div>
+</div>
+
+<script>
+(function(){
+'use strict';
+/* ======== configuration: point `endpoint` at your proxy (see worker.js) to run the agent on a live model ======== */
+const CONFIG={endpoint:'',remoteTTS:false,maxToolRounds:3};
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const LANG='en';
+const T=o=>typeof o==='string'?o:(o[LANG]||o.en);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const sleep=ms=>new Promise(r=>setTimeout(r,RM?Math.min(ms,40):ms));
+
+/* ---------- data ---------- */
+const ROLE={first:{en:'first author',zh:'一作'},core:{en:'core author',zh:'核心作者'},co:{en:'co-author',zh:'合作者'},contrib:{en:'contributor',zh:'参与'}};
+const PAPERS=[
+ {id:'duplexpo',one:"This is Yuxin's NeurIPS 2026 paper: an RL method that teaches a full-duplex model when to speak, separately from what to say.",fig:'media/fig-duplexpo.jpg',video:'media/duplexpo-demo.mp4',poster:'media/duplexpo-demo-poster.jpg',g:'duplex',y:2026,v:{en:'NeurIPS 2026',zh:'NeurIPS 2026'},t:'Decoupling Conversational Dynamics in Full-Duplex Spoken Models through Reinforcement Learning',au:'Li, Y., Wu, D., Lin, G. T., Lee, H. Y., Qin, C., Chen, Z., & Chen, C.',r:'first',links:[['Paper','https://arxiv.org/abs/2607.07148'],['Demo','https://liyuxin44.github.io/DuplexPO/'],['Code','https://github.com/LiYuxin44/DuplexPO_official']]},
+ {id:'silent',fig:'media/fig-silent.jpg',one:"The Silent Thought, at ICML 2026: latent reasoning inside a full-duplex dialogue model, so it can think while it listens.",g:'duplex',y:2026,v:{en:'ICML 2026',zh:'ICML 2026'},t:'The Silent Thought: Modeling Internal Cognition in Full-Duplex Spoken Dialogue Models via Latent Reasoning',au:'Wu, D., Zhang, T., Li, Y., Liu, H., Chen, C., Chng, E. S., & Bengio, Y.',r:'co',links:[['Paper','https://arxiv.org/abs/2603.17837']]},
+ {id:'duplexsla',one:"DuplexSLA: a full-duplex spoken language model that keeps speech, language and action in one synchronized stream.",fig:'media/fig-duplexsla.jpg',g:'duplex',y:2026,v:{en:'Technical report',zh:'技术报告'},t:'DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action',au:'Zhang, H., Chen, J., Wu, D., Li, Y., et al., & Tian, F.',r:'core',links:[['Paper','https://arxiv.org/abs/2605.20755']]},
+ {id:'sa25',one:"The Step-Audio 2.5 report: one shared audio-language stack behind ASR, TTS and real-time dialogue.",fig:'media/fig-sa25.jpg',g:'posttrain',y:2026,v:{en:'Technical report',zh:'技术报告'},t:'Step-Audio 2.5 Technical Report',au:'Lin, B., Zhao, B., Wu, B., Yan, C., Wu, C., Yi, C., et al. (Li, Y. among core authors)',r:'core',links:[['Paper','https://arxiv.org/pdf/2605.23463']]},
+ {id:'sar15',one:"Step-Audio-R1.5: the follow-up reasoning audio model, evaluated across speech-to-text benchmarks.",fig:'media/fig-sar15.jpg',g:'posttrain',y:2026,v:{en:'Technical report',zh:'技术报告'},t:'Step-Audio-R1.5 Technical Report',au:'Zhang, Y., Zhang, X. T., Liu, D., Tian, F., Deng, Y., Chen, J., et al. (Li, Y. contributor)',r:'contrib',links:[['Paper','https://arxiv.org/abs/2604.25719']]},
+ {id:'sar1',one:"Step-Audio-R1: the first audio reasoning model, trained to ground its chain of thought in the sound rather than in a transcript.",fig:'media/fig-sar1.jpg',g:'posttrain',y:2025,v:{en:'Technical report',zh:'技术报告'},t:'Step-Audio-R1 Technical Report',au:'Tian, F., Zhang, X. T., Zhang, Y., Zhang, H., Li, Y., Liu, D., et al., & Yu, G.',r:'core',links:[['Paper','https://arxiv.org/abs/2511.15848'],['Code','https://github.com/stepfun-ai/Step-Audio-R1'],['Weights','https://huggingface.co/stepfun-ai/Step-Audio-R1.1']]},
+ {id:'sa2',one:"Step-Audio 2: an end-to-end audio language model for industry-strength speech understanding and conversation.",fig:'media/fig-sa2.jpg',g:'posttrain',y:2025,v:{en:'Technical report',zh:'技术报告'},t:'Step-Audio 2 Technical Report',au:'Wu, B., Yan, C., Hu, C., Yi, C., Feng, C., Tian, F., et al. (Li, Y. among core authors)',r:'core',links:[['Paper','https://arxiv.org/abs/2507.16632'],['Code','https://github.com/stepfun-ai/Step-Audio2'],['Weights','https://huggingface.co/collections/stepfun-ai/step-audio-2']]},
+ {id:'surrogate',one:"This Interspeech paper explains why audio LLMs fail at reasoning: they reason about a textual surrogate instead of the audio.",g:'posttrain',y:2026,v:{en:'Interspeech 2026',zh:'Interspeech 2026'},t:'Why Audio LLMs Fail at Reasoning: The Trap of Textual Surrogates',au:'Zhang, A. Y., Liu, D., Zhang, H., Zhang, T. X., Li, Y., Tian, F., et al., & Yu, G.',r:'co',links:[]},
+ {id:'paracalib',fig:'media/fig-paracalib.jpg',one:"ParaCalib, at EMNLP 2026: paralinguistic cues calibrated against the semantics, so depression detection stops leaning on the words.",g:'health',y:2026,v:{en:'EMNLP 2026',zh:'EMNLP 2026'},t:'Semantically Calibrated Paralinguistic Modeling for Depression Detection',au:'Li, Y., Li, Y., Chao, Y., Zhang, X., Chng, E. S., & Guan, C.',r:'first',links:[['Paper','https://openreview.net/pdf?id=er30rvgMsO'],['Code','https://github.com/yifeili-13/ParaCalib']]},
+ {id:'depflow',one:"DepFlow: a speech generator that disentangles what is said from how it sounds, to remove semantic bias in depression detection.",fig:'media/fig-depflow.jpg',g:'health',y:2026,v:{en:'IEEE TAFFC, under review',zh:'IEEE TAFFC，审稿中'},t:'DepFlow: Disentangled Speech Generation to Mitigate Semantic Bias in Depression Detection',au:'Li, Y., Zhang, X., Li, Y., Guo, Z., Zhang, H., Chng, E. S., & Guan, C.',r:'first',links:[['Paper','https://arxiv.org/abs/2601.00303']]},
+ {id:'hssl',fig:'media/fig-hssl.jpg',one:"HAREN-CTC, in IEEE JBHI: a hierarchical model over self-supervised speech layers, with a CTC objective that aligns sparse depression cues in time.",g:'health',y:2026,v:{en:'IEEE JBHI',zh:'IEEE JBHI'},t:'Hierarchical Self-Supervised Representation Learning for Depression Detection from Speech (HAREN-CTC)',au:'Li, Y., Chng, E. S., & Guan, C.',r:'first',links:[['Paper','https://arxiv.org/abs/2510.08593'],['DOI','https://doi.org/10.1109/JBHI.2026.3715892']]},
+ {id:'review',one:"A systematic review of automated depression detection from text and audio, in IEEE JBHI.",g:'health',y:2025,v:{en:'IEEE JBHI',zh:'IEEE JBHI'},t:'Automated Depression Detection from Text and Audio: A Systematic Review',au:'Li, Y., Kumbale, S., Chen, Y., Surana, T., Chng, E. S., & Guan, C.',r:'first',links:[]},
+ {id:'paraasr',one:"ParaASR: multi-token prediction that makes LLM-based speech recognition fast on long audio.",fig:'media/fig-paraasr.jpg',g:'asr',y:2026,v:{en:'WAICA 2026',zh:'WAICA 2026'},t:'ParaASR: Multi-Token Prediction for Fast and Long-Context LLM-Based Speech Recognition',au:'Lin, Q., Li, Y., Zhang, H., Chen, J., Huang, Y., Tian, F., et al., & Jiang, D.',r:'co',links:[['Paper','https://arxiv.org/abs/2607.29279']]},
+ {id:'eegspell',fig:'media/fig-eegspell.jpg',one:"EEG-SPELL: decoding covert speech from EEG by aligning spectral, phonetic and lexical levels.",g:'asr',y:2026,v:{en:'IEEE TASLP',zh:'IEEE TASLP'},t:'EEG-SPELL: Spectral-Phonetic-Lexical Alignment Network for EEG-Based Covert Speech Decoding',au:'Guo, Z., Li, Y., Jiang, M., Zhang, W., Teo, K. A. C., Bhuvanakantham, R., et al., & Guan, C.',r:'co',links:[['Paper','https://ieeexplore.ieee.org/document/11623677/']]},
+];
+const NEWS=[
+ {d:'2026/09',en:'DuplexPO accepted to NeurIPS 2026: decoupling conversational dynamics in full-duplex spoken models through RL. First author.',zh:'DuplexPO 被 NeurIPS 2026 接收：用强化学习解耦全双工语音模型的对话动态。一作。'},
+ {d:'2026/08',en:'ParaCalib accepted to EMNLP 2026: semantically calibrated paralinguistic modeling for depression detection. First author.',zh:'ParaCalib 被 EMNLP 2026 接收：面向抑郁检测的语义校准副语言建模。一作。'},
+ {d:'2026/07',en:'Joined Anuttacon as an Audio LLM research intern.',zh:'加入 Anuttacon，任音频大模型研究实习生，工作横跨新加坡与美国。'},
+ {d:'2026/07',en:'DuplexPO preprint is out.',zh:'DuplexPO 预印本发布。'},
+ {d:'2026/07',en:'ParaASR preprint: multi-token prediction for fast, long-context LLM-based ASR. To appear at WAICA 2026.',zh:'ParaASR 预印本：多 token 预测加速长上下文大模型语音识别。WAICA 2026。'},
+ {d:'2026/06',en:'Why Audio LLMs Fail at Reasoning: The Trap of Textual Surrogates accepted to Interspeech 2026. Co-author.',zh:'Why Audio LLMs Fail at Reasoning 被 Interspeech 2026 接收。合作者。'},
+ {d:'2026/05',en:'The Silent Thought, latent reasoning for full-duplex spoken dialogue models, accepted to ICML 2026. Co-author.',zh:'The Silent Thought（全双工语音对话模型的隐式推理）被 ICML 2026 接收。合作者。'},
+ {d:'2026/05',en:'Step-Audio 2.5 technical report and DuplexSLA released, both as a core author.',zh:'Step-Audio 2.5 技术报告与 DuplexSLA 发布，均为核心作者。'},
+ {d:'2026/04',en:'Step-Audio-R1.5 technical report released.',zh:'Step-Audio-R1.5 技术报告发布。'},
+ {d:'2026',en:'Hierarchical self-supervised representation learning for depression detection from speech accepted to IEEE JBHI. First author.',zh:'层次化自监督抑郁语音检测被 IEEE JBHI 接收。一作。'},
+ {d:'2026',en:'EEG-SPELL, covert speech decoding from EEG, accepted to IEEE TASLP. Co-author.',zh:'EEG-SPELL（脑电默读语音解码）被 IEEE TASLP 接收。合作者。'},
+ {d:'2026/01',en:'DepFlow preprint: disentangled speech generation to mitigate semantic bias in depression detection.',zh:'DepFlow 预印本：用解耦语音生成缓解抑郁检测中的语义偏差。'},
+ {d:'2025/11',en:'Step-Audio-R1 technical report, code and weights released. Core author.',zh:'Step-Audio-R1 技术报告、代码与权重发布，核心作者。'},
+ {d:'2025/07',en:'Step-Audio 2 technical report, code and weights released. Core author.',zh:'Step-Audio 2 技术报告、代码与权重发布，核心作者。'},
+ {d:'2025/04',en:'Joined StepFun as a research scientist intern.',zh:'加入上海阶跃星辰 StepFun，任研究科学家实习生。'},
+ {d:'2025',en:'Automated depression detection from text and audio, a systematic review, published in IEEE JBHI. First author.',zh:'文本与音频抑郁自动检测系统综述发表于 IEEE JBHI。一作。'},
+];
+const WORK=[
+ {id:'anuttacon',one:"Yuxin's current role: post-training audio LLMs at Anuttacon for understanding, reasoning and tool use, and building voice agents with agentic RL.",k:{en:'07/2026 to now',zh:'2026.07 至今'},org:'Anuttacon',role:{en:'Audio LLM research intern, Singapore and US',zh:'音频大模型研究实习生，新加坡与美国'},d:{en:'Multimodal post-training for audio understanding, reasoning and tool use: synthetic data, training and controlled experiments. Multilingual voice agents through agentic RL, and a closed-loop evaluation and training framework.',zh:'音频理解、推理与工具调用方向的多模态后训练：合成数据、训练与对照实验。用智能体强化学习做多语言语音助手，并搭建闭环评测与训练框架。'}},
+ {id:'stepfun',one:"At StepFun, Yuxin was a core author of Step-Audio 2, R1, 2.5 and DuplexSLA, owning SFT, RL, data and reward design.",k:{en:'04/2025 to 06/2026',zh:'2025.04 至 2026.06'},org:'StepFun',role:{en:'Research scientist intern, Shanghai',zh:'研究科学家实习生，上海'},d:{en:'Core author of Step-Audio 2, Step-Audio-R1, Step-Audio 2.5 and DuplexSLA. Owned post-training research across SFT, RL, data and reward design, from research idea to large-scale training run.',zh:'Step-Audio 2、Step-Audio-R1、Step-Audio 2.5、DuplexSLA 核心作者。负责 SFT、RL、数据与奖励设计的后训练研究，从想法到大规模训练。'}},
+ {id:'cbcr',one:"At NTU's CBCR lab, Yuxin leads speech-based depression assessment and works on removing semantic bias from speech models.",k:{en:'06/2024 to now',zh:'2024.06 至今'},org:'NTU, CBCR',role:{en:'Research associate, Singapore',zh:'研究助理，新加坡'},d:{en:'Speech-based depression assessment: how acoustic and linguistic representations carry depression, and how to mitigate semantic bias. Dataset design, clinical collaboration and invention disclosure.',zh:'基于语音的抑郁评估：声学与语言表征如何承载抑郁，如何缓解语义偏差。数据集设计、临床合作与发明披露。'}},
+ {id:'aisg',one:"At AISG Speech Lab, Yuxin worked on self-supervised speech representations and speech-text modeling.",k:{en:'12/2023 to 06/2024',zh:'2023.12 至 2024.06'},org:'AISG Speech Lab, NTU',role:{en:'Research intern, Singapore',zh:'研究实习生，新加坡'},d:{en:'Self-supervised speech representations and speech-text modeling. Led a literature review project and research seminars.',zh:'自监督语音表征与语音文本建模。主持文献综述项目和研讨会。'}},
+ {id:'ucl',one:"At UCL, Yuxin built multimodal models for medical classification and speech emotion recognition.",k:{en:'11/2022 to 12/2023',zh:'2022.11 至 2023.12'},org:'University College London',role:{en:'Research assistant, London',zh:'研究助理，伦敦'},d:{en:'Multimodal models for medical classification and speech emotion recognition from clinical narratives, acoustic features and self-supervised speech representations.',zh:'面向医学分类与语音情感识别的多模态模型，融合临床叙述、声学特征与自监督语音表征。'}},
+];
+const EDU=[
+ {id:'ntu',one:"Yuxin's PhD at Nanyang Technological University, advised by Prof. Cuntai Guan and Prof. Eng Siong Chng, with a GPA of 4.67 out of 5.",k:{en:'2024 to now',zh:'2024 至今'},org:'Nanyang Technological University',role:{en:'PhD, College of Computing and Data Science',zh:'博士，计算与数据科学学院'},d:{en:'Advised by Prof. Cuntai Guan and Prof. Eng Siong Chng. GPA 4.67 of 5.',zh:'导师 Cuntai Guan 教授与 Eng Siong Chng 教授。GPA 4.67/5。'}},
+ {id:'ucl',one:"An MSc in Knowledge, Information and Data Science at University College London, graduated with Distinction.",k:{en:'2022 to 2023',zh:'2022 至 2023'},org:'University College London',role:{en:'MSc, Knowledge, Information and Data Science',zh:'理学硕士，知识、信息与数据科学'},d:{en:'Distinction.',zh:'Distinction（优等）。'}},
+ {id:'csu',one:"A Bachelor of Management in Information Management and Information Systems at Central South University.",k:{en:'2018 to 2022',zh:'2018 至 2022'},org:'Central South University',role:{en:'BMgmt, Information Management and Information Systems',zh:'管理学学士，信息管理与信息系统'},d:{en:'',zh:''}},
+];
+const SKILLS={en:'Speech: full-duplex dialogue, ASR, TTS, paralinguistics. Methods: SFT, DPO, GRPO, RLHF, on-policy distillation. Infrastructure: Megatron, DeepSpeed, FSDP, SGLang, Slurm. Models: Step-Audio, Qwen-Audio, Qwen-Omni, Audio Flamingo, LLaVA. Languages: Python, C++, C.',zh:'语音：全双工对话、ASR、TTS、副语言。方法：SFT、DPO、GRPO、RLHF、在线蒸馏。基础设施：Megatron、DeepSpeed、FSDP、SGLang、Slurm。模型：Step-Audio、Qwen-Audio、Qwen-Omni、Audio Flamingo、LLaVA。语言：Python、C++、C。'};
+const PROFILE={en:'Yuxin Li is a PhD candidate at NTU Singapore (advisors Cuntai Guan, Eng Siong Chng), a core author of Step-Audio 2, Step-Audio-R1, Step-Audio 2.5 and DuplexSLA, and first author of DuplexPO. Yuxin post-trains audio LLMs with RL so they time their turns, use tools and reason, and works on speech-based depression assessment.',zh:'Yuxin Li 是南洋理工大学博士生（导师 Cuntai Guan、Eng Siong Chng），Step-Audio 2、Step-Audio-R1、Step-Audio 2.5 与 DuplexSLA 核心作者，DuplexPO 一作。Yuxin 用强化学习做音频大模型后训练，让模型把握说话时机、调用工具、推理，并研究基于语音的抑郁评估。'};
+
+/* ---------- render ---------- */
+function boldMe(au){return esc(au).replace('Li, Y.','<b>Li, Y.</b>');}
+function renderPubs(){
+  const rank={first:0,core:1,co:2,contrib:3};
+  const list=PAPERS.slice().sort((x,y)=>(y.y-x.y)||(rank[x.r]-rank[y.r]));
+  $('#pubGroups').innerHTML=list.map(p=>{
+    const paper=(p.links.find(l=>l[0]==='Paper')||p.links[0]||[null,null])[1];
+    const links=p.links.map(([n,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join('')+(p.video?`<button type="button" class="vbtn" data-vid="${p.id}" aria-expanded="false">Demo video</button>`:'');
+    const fig=p.fig?`<a class="fig" ${paper?`href="${esc(paper)}" target="_blank" rel="noopener"`:''}><img src="${esc(p.fig)}" loading="lazy" alt="Main figure of ${esc(p.t)}"></a>`:'';
+    const vid=p.video?`<div class="vid" id="vid-${p.id}" hidden><video controls preload="none" playsinline poster="${esc(p.poster||'')}"><source src="${esc(p.video)}" type="video/mp4"></video><div class="cap">A short walkthrough of the DuplexPO project page: method, results and listening probes.</div></div>`:'';
+    return `<div class="pub${p.fig?' has-fig':''}" id="p-${p.id}">${fig}<div class="t">${esc(p.t)}</div><div class="au">${boldMe(p.au)}</div><div class="v">${esc(T(p.v))}${String(T(p.v)).includes(String(p.y))?'':', '+p.y}. <span class="role">${esc(T(ROLE[p.r]))}.</span></div>${links?`<div class="lk">${links}</div>`:''}</div>${vid}`;}).join('');
+}
+$('#pubGroups').addEventListener('click',e=>{const b=e.target.closest('.vbtn');if(!b)return;const box=$('#vid-'+b.dataset.vid);const open=box.hidden;box.hidden=!open;b.setAttribute('aria-expanded',String(open));b.textContent=open?'Hide video':'Demo video';const v=box.querySelector('video');if(open){v.play().catch(()=>{});}else{v.pause();}});
+function renderNews(){$('#newsList').innerHTML=NEWS.map(n=>`<li><b>${n.d}</b><span>${esc(T(n))}</span></li>`).join('');}
+function renderXp(){
+  $('#xpList').innerHTML=WORK.map(w=>`<li id="w-${w.id}"><span class="when">${esc(T(w.k))}</span><span><span class="org">${esc(w.org)}</span> <span class="role">${esc(T(w.role))}</span><span class="d">${esc(T(w.d))}</span></span></li>`).join('');
+  $('#eduList').innerHTML=EDU.map(w=>`<li id="e-${w.id}"><span class="when">${esc(T(w.k))}</span><span><span class="org">${esc(w.org)}</span> <span class="role">${esc(T(w.role))}</span>${T(w.d)?`<span class="d">${esc(T(w.d))}</span>`:''}</span></li>`).join('');
+}
+function renderAll(){renderPubs();renderNews();renderXp();renderChips();brainLabel();soundLabel();}
+
+/* ---------- lane state (drives labels only) ---------- */
+const lanes={user:{state:'silent'},agent:{state:'idle'}};
+function setLane(k,state){lanes[k].state=state;}
+
+/* ---------- tool log (not shown) ---------- */
+const TRACE=[];
+function clearTrace(){TRACE.length=0;}
+function toolCall(call){const k={call,res:''};TRACE.push(k);return k;}
+
+/* ---------- speech primitives ---------- */
+let SOUND=false,agentSeg=null,agentAbort=null,asking=null,audioEl=null;
+
+const VOICE_PREF=['Aria','Ava','Jenny','Emma','Samantha','Zoe','Allison','Nicky','Google US English','Google UK English Female','Zira','Karen','Moira','Tessa','Fiona'];
+function pickVoice(lang){try{const vs=speechSynthesis.getVoices();const en=vs.filter(v=>/^en/i.test(v.lang.replace('_','-')));
+  for(const name of VOICE_PREF){const v=en.find(x=>x.name.includes(name)&&!/male\b(?!.*female)/i.test(x.name.replace(/female/i,'')));if(v)return v;}
+  return en.find(v=>/female/i.test(v.name))||en.find(v=>/en-US/i.test(v.lang))||en[0]||null;}catch(e){return null;}}
+function cutAgent(quiet){
+  if(asking){asking.abort=true;if(!asking.done){asking.done=true;try{asking.ctrl&&asking.ctrl.abort();}catch(e){}if(lanes.agent.state==='thinking')setLane('agent','idle');}}
+  if(!agentSeg||agentSeg.e!=null){if(quiet)guideStop();return false;}
+  agentSeg.cut=true;agentSeg.e=1;
+  if(agentAbort)agentAbort();try{speechSynthesis.cancel();}catch(e){}if(audioEl){try{audioEl.pause();}catch(e){}audioEl=null;}
+  setLane('agent','yielded');
+  $$('#answer .cur, #guide .cur').forEach(c=>c.classList.add('off'));
+  if(!quiet){const a=$('#answer');const y=document.createElement('span');y.className='yield';y.textContent=T({en:'yielded: you cut in',zh:'让位：你插话了'});a.appendChild(y);}
+  guideStop();
+  setTimeout(()=>{if(lanes.agent.state==='yielded')setLane('agent','idle');},1500);
+  return true;
+}
+function agentSpeak(text,lang,host){return new Promise(resolve=>{
+  const seg={text:'',cut:false,e:null};agentSeg=seg;setLane('agent','speaking');
+  const a=host||$('#answer');a.innerHTML='<span class="txt"></span><span class="cur"></span>';const txt=a.querySelector('.txt');
+  let done=false,timer=0;
+  const setText=s=>{if(s.length>seg.text.length){seg.text=s;txt.textContent=s;}};
+  const finish=()=>{if(done)return;done=true;clearInterval(timer);seg.e=1;a.querySelector('.cur')?.classList.add('off');if(lanes.agent.state==='speaking')setLane('agent','idle');agentAbort=null;resolve(!seg.cut);};
+  agentAbort=()=>{finish();};
+  const units=lang==='zh'?[...text]:text.split(/(\s+)/);
+  const useTTS=SOUND&&('speechSynthesis' in window||CONFIG.remoteTTS);
+  const startTimer=pace=>{let i=0;timer=setInterval(()=>{if(done)return;i++;setText(units.slice(0,i).join(''));if(i>=units.length){clearInterval(timer);if(!useTTS)finish();}},RM?1:pace);};
+  if(!useTTS){startTimer(lang==='zh'?150:70);return;}
+  if(CONFIG.remoteTTS&&CONFIG.endpoint){
+    fetch(CONFIG.endpoint.replace(/\/chat\/?$/,'')+'/tts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,lang})})
+      .then(r=>{if(!r.ok)throw new Error('tts '+r.status);return r.blob();})
+      .then(b=>{if(done)return;const el=new Audio(URL.createObjectURL(b));audioEl=el;el.onloadedmetadata=()=>{startTimer(Math.max(20,(el.duration*1000)/units.length));};el.onended=()=>{setText(text);finish();};el.onerror=()=>{if(!done){startTimer(lang==='zh'?200:95);}};el.play().catch(()=>{startTimer(lang==='zh'?150:70);});})
+      .catch(()=>{if(!done)browserTTS();});
+  }else browserTTS();
+  function browserTTS(){
+    startTimer(lang==='zh'?200:95);
+    try{
+      const u=new SpeechSynthesisUtterance(text);u.lang=lang==='zh'?'zh-CN':'en-US';u.rate=1.03;u.pitch=1.08;const v=pickVoice(u.lang);if(v)u.voice=v;
+      u.onboundary=e=>{if(e.name!=='word')return;const ci=e.charIndex||0;const m=text.slice(ci).match(/^\S+/);setText(text.slice(0,ci+(m?m[0].length:0)));};
+      let started=false;u.onstart=()=>{started=true;};
+      u.onend=()=>{setText(text);finish();};u.onerror=()=>{if(!done){setText(text);finish();}};
+      if(speechSynthesis.speaking||speechSynthesis.pending){speechSynthesis.cancel();setTimeout(()=>{if(!done)speechSynthesis.speak(u);},80);}else speechSynthesis.speak(u);
+      setTimeout(()=>{if(!done&&!started&&!speechSynthesis.speaking){setText(text);finish();note(T({en:'No audio came out. This browser reports no usable system voice; try Chrome, Edge or Safari on macOS or Windows.',zh:'没有声音输出：此浏览器没有可用的系统语音。'}));}},3000);
+    }catch(e){setText(text);finish();}
+  }
+});}
+function userActivity(){cutAgent();setLane('user','speaking');}
+function userFinal(){setLane('user','silent');}
+
+/* ---------- tools: one implementation shared by the rule brain and the live model ---------- */
+const TOOL_SCHEMA=[
+ {type:'function',function:{name:'search_papers',description:"Search Yuxin's publications by topic. Returns titles, venues, roles and links.",parameters:{type:'object',properties:{topic:{type:'string',enum:['duplex','posttrain','health','asr','all'],description:'duplex = full-duplex dialogue and agents; posttrain = Step-Audio family, RL and reasoning; health = depression and speech; asr = ASR, TTS and EEG decoding'}},required:['topic']}}},
+ {type:'function',function:{name:'open_experience',description:'Open one role in the experience list and return its details.',parameters:{type:'object',properties:{org:{type:'string',enum:['Anuttacon','StepFun','NTU CBCR','AISG Speech Lab','UCL']}},required:['org']}}},
+ {type:'function',function:{name:'open_education',description:"Return Yuxin's degrees and advisors.",parameters:{type:'object',properties:{}}}},
+ {type:'function',function:{name:'show_skills',description:"Return Yuxin's technical stack.",parameters:{type:'object',properties:{}}}},
+ {type:'function',function:{name:'get_contact',description:'Return email and profile links.',parameters:{type:'object',properties:{}}}},
+ {type:'function',function:{name:'open_demo',description:'Return the link to the DuplexPO audio demo page.',parameters:{type:'object',properties:{}}}},
+ {type:'function',function:{name:'summarize_profile',description:"Return a short third-person summary of Yuxin's profile.",parameters:{type:'object',properties:{}}}},
+];
+const ORGMAP={'Anuttacon':'anuttacon','StepFun':'stepfun','NTU CBCR':'cbcr','AISG Speech Lab':'aisg','UCL':'ucl'};
+function hit(sel,ms){const el=$(sel);if(!el)return;el.classList.add('hit');setTimeout(()=>el.classList.remove('hit'),ms||3500);}
+async function execTool(name,args){
+  args=args||{};
+  switch(name){
+    case 'search_papers':{const topic=args.topic||'all';const rank={first:0,core:1,co:2,contrib:3};const rows=PAPERS.filter(p=>topic==='all'||p.g===topic).sort((x,y)=>(y.y-x.y)||(rank[x.r]-rank[y.r]));
+      return{summary:`${rows.length} rows`,data:rows.map(p=>({title:p.t,venue:p.v.en,year:p.y,role:ROLE[p.r].en,summary:p.one,links:Object.fromEntries(p.links)})),stops:rows.slice(0,3).map(p=>({sel:'#p-'+p.id,line:p.one}))};}
+    case 'open_experience':{const id=ORGMAP[args.org]||'anuttacon';const w=WORK.find(w=>w.id===id);
+      return{summary:'1 row',data:{org:w.org,period:w.k.en,role:w.role.en,details:w.d.en},stops:[{sel:'#w-'+id,line:w.one}]};}
+    case 'open_education':return{summary:'3 rows',data:EDU.map(e=>({school:e.org,period:e.k.en,degree:e.role.en,notes:e.d.en})),stops:[{sel:'#eduList',line:"Yuxin is a PhD candidate at NTU, advised by Prof. Cuntai Guan and Prof. Eng Siong Chng, after an MSc with Distinction at UCL."}]};
+    case 'show_skills':return{summary:'5 groups',data:SKILLS.en};
+    case 'get_contact':return{summary:'yuxin.li@ntu.edu.sg',data:{email:'yuxin.li@ntu.edu.sg',scholar:'https://scholar.google.com/citations?user=F4wM6KsAAAAJ',github:'https://github.com/LiYuxin44',linkedin:'https://www.linkedin.com/in/yuxin-li-73a326242/'},stops:[{sel:'#contact .mail',line:'This is how to reach Yuxin. Email works best; Scholar, GitHub and LinkedIn are right below.'}]};
+    case 'open_demo':return{summary:'1 link',data:{url:'https://liyuxin44.github.io/DuplexPO/',probes:['waiting through hesitation','entering on clean boundaries','adding acknowledgements','keeping answers compact']},stops:[{sel:'#p-duplexpo',line:'Here is the DuplexPO demo. Press Demo video for a walkthrough, or open the project page for the listening probes.'}],link:['https://liyuxin44.github.io/DuplexPO/',{en:'Open the demo page',zh:'打开演示页'}]};
+    case 'summarize_profile':return{summary:'ok',data:PROFILE.en,stops:[{sel:'#about .main',line:'This is Yuxin: a PhD candidate at NTU who builds speech agents that know when to speak, what to say and what to do.'}]};
+    default:return{summary:'unknown tool',data:null};
+  }
+}
+
+/* ---------- rule brain (offline) ---------- */
+const INTENTS=[
+ {re:/contact|e-?mail|reach|hire|hiring|recruit|联系|邮箱|邮件|招|怎么找/i,run(){return{calls:[['get_contact',{}]],lead:"Here is how to reach Yuxin.",ans:{en:'Email yuxin.li@ntu.edu.sg. Google Scholar, GitHub and LinkedIn are in the contact section.',zh:'邮箱 yuxin.li@ntu.edu.sg。Google Scholar、GitHub 和 LinkedIn 在联系栏。'}};}},
+ {re:/demo|listen|sample|试听|演示|听一?听/i,run(){return{calls:[['open_demo',{}]],lead:"Here is the demo.",ans:{en:'The DuplexPO demo page has four listening probes: waiting through hesitation, entering on clean boundaries, adding acknowledgements, and keeping answers compact.',zh:'DuplexPO 演示页有四组试听：等待犹豫、在干净边界处进入、加入回应词、回答保持简洁。'}};}},
+ {re:/duplex|turn[- ]?tak|barge|interrupt|timing|dialog|conversation|双工|对话|打断|时机|插话/i,run(){return{calls:[['search_papers',{topic:'duplex'}]],lead:"Three papers on full-duplex dialogue. Let me point them out.",ans:{en:"Three items on full-duplex dialogue. DuplexPO is Yuxin's first-author NeurIPS 2026 paper. It separates when to speak from what to say and trains only on the windows where timing is decided, reaching 0.24 seconds of turn-taking latency. The Silent Thought at ICML adds latent reasoning to a duplex model, and DuplexSLA synchronizes speech, language and action.",zh:'全双工对话相关三项。DuplexPO 是 Yuxin 的一作 NeurIPS 2026 论文，把「何时说」和「说什么」分开，只在决定时机的窗口上训练，换手延迟 0.24 秒。ICML 的 The Silent Thought 给双工模型加入隐式推理，DuplexSLA 则同步语音、语言和动作。'}};}},
+ {re:/\btts\b|\basr\b|synthes|recogni|transcri|speech generation|合成|识别|转写|语音生成/i,run(){return{calls:[['search_papers',{topic:'asr'}]],lead:"Yuxin works on both ends, ASR and TTS. Here are the papers.",ans:{en:'A spoken agent stands on ASR and TTS, and Yuxin works on both ends. ParaASR predicts several tokens per step for fast, long-context LLM speech recognition. On the generation side, Step-Audio 2 and 2.5 produce speech directly, and DuplexSLA keeps speech, language and action in one synchronized stream.',zh:'语音智能体脚下是 ASR 和 TTS，Yuxin 两端都做。ParaASR 用多 token 预测做快速、长上下文的大模型语音识别；生成这端，Step-Audio 2 和 2.5 直接生成语音，DuplexSLA 把语音、语言和动作同步在一条流里。'}};}},
+ {re:/depress|clinical|health|mental|paralinguistic|emotion|抑郁|临床|健康|情感|副语言/i,run(){return{calls:[['search_papers',{topic:'health'}]],lead:"Four first-author papers on depression and speech. Here are the latest three.",ans:{en:'Four first-author papers on depression and speech. A systematic review in JBHI, hierarchical self-supervised representations in JBHI, ParaCalib at EMNLP, which calibrates paralinguistic cues against the semantics, and DepFlow, which generates disentangled speech to remove semantic bias.',zh:'四篇一作的抑郁与语音论文。JBHI 系统综述、JBHI 层次化自监督表征、EMNLP 的 ParaCalib（把副语言线索相对语义做校准）、以及 DepFlow（生成解耦语音以去除语义偏差）。'}};}},
+ {re:/\brl\b|reinforcement|grpo|dpo|reward|reason|强化|推理|奖励/i,run(){return{calls:[['search_papers',{topic:'posttrain'}]],lead:"RL runs through most of Yuxin's work. These are the main ones.",ans:{en:"RL runs through most of Yuxin's work. DuplexPO uses a GRPO-style objective on conversational dynamics. Step-Audio-R1 and R1.5 are reasoning audio models Yuxin helped train, and the Interspeech paper explains why audio LLMs slip into textual surrogates when they reason.",zh:'强化学习贯穿 Yuxin 的大部分工作。DuplexPO 在对话动态上用 GRPO 风格的目标；Step-Audio-R1 和 R1.5 是 Yuxin 参与训练的推理音频模型；Interspeech 那篇解释了音频大模型推理时为何会掉进文字替代品的陷阱。'}};}},
+ {re:/eeg|bci|brain|脑/i,run(){return{calls:[['search_papers',{topic:'asr'}]],lead:"One paper on decoding speech from the brain.",ans:{en:'EEG-SPELL, in IEEE TASLP, decodes covert speech from EEG by aligning spectral, phonetic and lexical levels.',zh:'IEEE TASLP 上的 EEG-SPELL 通过对齐频谱、音素、词汇三个层级，从脑电解码默读语音。'}};}},
+ {re:/step-?audio|stepfun|阶跃|technical report|技术报告|open[- ]?source|开源/i,run(){return{calls:[['open_experience',{org:'StepFun'}],['search_papers',{topic:'posttrain'}]],lead:"Here is Yuxin's time at StepFun, and the reports that came out of it.",ans:{en:'At StepFun, Yuxin was a core author of Step-Audio 2, Step-Audio-R1, Step-Audio 2.5 and DuplexSLA, and contributed to R1.5. Yuxin owned post-training there: SFT, RL, data and reward design, turning research ideas into large-scale runs. Code and weights for Step-Audio 2 and R1 are public.',zh:'在 StepFun，Yuxin 是 Step-Audio 2、Step-Audio-R1、Step-Audio 2.5、DuplexSLA 的核心作者，也参与了 R1.5，负责后训练：SFT、RL、数据和奖励设计，把研究想法变成大规模训练。Step-Audio 2 和 R1 的代码与权重已开源。'}};}},
+ {re:/anuttacon|tool[- ]?use|agent|bench|voice assistant|智能体|工具|评测/i,run(){return{calls:[['open_experience',{org:'Anuttacon'}]],lead:"Here is Yuxin's current role.",ans:{en:'At Anuttacon, Yuxin runs post-training for audio understanding, reasoning and tool use: synthetic data, training and controlled experiments. Yuxin also builds multilingual voice agents with agentic RL, measured on WorkBuddy Bench, TAU-Voice, BFCL, ACEBench and Voice-Code-Bench.',zh:'在 Anuttacon，Yuxin 负责音频理解、推理和工具调用的后训练：合成数据、训练、对照实验。也用智能体强化学习做多语言语音助手，在 WorkBuddy Bench、TAU-Voice、BFCL、ACEBench、Voice-Code-Bench 上评测。'}};}},
+ {re:/skill|stack|infra|megatron|pytorch|framework|code|program|技能|框架|技术栈|工具链|代码/i,run(){return{calls:[['show_skills',{}]],ans:SKILLS};}},
+ {re:/phd|ntu|ucl|educat|degree|study|school|supervis|advis|博士|学历|学校|导师|读书/i,run(){return{calls:[['open_education',{}]],lead:"Here is Yuxin's education.",ans:{en:'Yuxin has been a PhD candidate at Nanyang Technological University since 2024, advised by Prof. Cuntai Guan and Prof. Eng Siong Chng, with a GPA of 4.67 of 5. Before that, an MSc with Distinction from UCL and a Bachelor of Management from Central South University.',zh:'Yuxin 自 2024 年起在南洋理工大学读博，导师 Cuntai Guan 教授与 Eng Siong Chng 教授，GPA 4.67/5。此前是 UCL 理学硕士（Distinction），中南大学管理学学士。'}};}},
+ {re:/paper|publication|publish|research|论文|发表|研究/i,run(){return{calls:[['search_papers',{topic:'all'}]],lead:"Fourteen papers and reports. Here are the three most recent.",ans:{en:'Nine papers and five technical reports, 2025 to 2026, five of them first-author. They are grouped by theme in the publications section.',zh:'九篇论文、五份技术报告，2025 到 2026 年，其中五篇一作。论文栏按主题分组。'}};}},
+ {re:/who|about|yourself|summar|intro|hello|\bhi\b|你是|介绍|简介|你好|是谁/i,run(){return{calls:[['summarize_profile',{}]],lead:"Here is Yuxin.",ans:PROFILE};}},
+];
+const FALLBACK={en:"No tool matches that. Ask about Yuxin's papers by topic, a role, the technical stack, contact details, the demo, or switch language.",zh:'没有匹配的工具。可以问 Yuxin 的论文（按主题）、某段经历、技术栈、联系方式、演示，或切换语言。'};
+
+/* ---------- live brain (OpenAI-compatible chat completions with tools, through your proxy) ---------- */
+let HIST=[];
+function systemPrompt(){return `You are the site agent on Yuxin Li's personal homepage. Speak about Yuxin in the third person; you are not Yuxin. Answer in the language the visitor writes in. Use the tools to look things up before making claims, and keep every claim grounded in tool results or this profile. After calling tools, reply with ONE short spoken sentence that introduces what the visitor is about to see; the page then walks the visitor to each item and reads a one-line description. No markdown, no lists. Profile: ${PROFILE.en}`;}
+async function liveTurn(q,me){
+  if(!HIST.length||HIST[0].role!=='system')HIST.unshift({role:'system',content:systemPrompt()});else HIST[0].content=systemPrompt();
+  HIST.push({role:'user',content:q});
+  for(let round=0;round<=CONFIG.maxToolRounds;round++){
+    const body={messages:HIST.slice(0,1).concat(HIST.slice(1).slice(-18)),tools:TOOL_SCHEMA,lang:LANG};
+    const r=await fetch(CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:me.ctrl.signal});
+    if(!r.ok)throw new Error('proxy '+r.status);
+    const j=await r.json();const msg=(j.choices&&j.choices[0]&&j.choices[0].message)||{};
+    HIST.push({role:'assistant',content:msg.content||null,tool_calls:msg.tool_calls||undefined});
+    if(msg.tool_calls&&msg.tool_calls.length&&round<CONFIG.maxToolRounds){
+      let extra=null;
+      for(const tc of msg.tool_calls){let args={};try{args=JSON.parse(tc.function.arguments||'{}');}catch(e){}
+        const k=toolCall(`${tc.function.name}(${JSON.stringify(args)})`);const out=await execTool(tc.function.name,args);k.res=out.summary;extra=extra||out;if(out.stops)me.stops=(me.stops||[]).concat(out.stops);
+        HIST.push({role:'tool',tool_call_id:tc.id,content:JSON.stringify(out.data)});await sleep(200);if(me.abort)return null;}
+      me.extra=extra;continue;
+    }
+    return msg.content||'';
+  }
+  return '';
+}
+
+/* ---------- ask: one entry point, two brains ---------- */
+async function ask(q){
+  q=(q||'').trim();if(!q)return;
+  cutAgent();userFinal();clearTrace();
+  const me={abort:false,done:false,ctrl:('AbortController' in window)?new AbortController():null,extra:null,stops:[]};asking=me;
+  setLane('agent','thinking');
+  let text='',lang=LANG,extra=null,stops=[];
+  if(CONFIG.endpoint){
+    try{text=await liveTurn(q,me);if(me.abort||text===null)return;extra=me.extra;stops=me.stops;brainLabel();}
+    catch(e){if(me.abort)return;brainLabel(T({en:'live model unreachable, using offline rules',zh:'真模型不可达，改用离线规则'}));text='';}
+  }
+  if(!text){
+    await sleep(380);if(me.abort)return;
+    const intent=INTENTS.find(i=>i.re.test(q));const plan=intent?intent.run():{calls:[],ans:FALLBACK};
+    for(const [name,args] of plan.calls){const k=toolCall(`${name}(${JSON.stringify(args)})`);const out=await execTool(name,args);k.res=out.summary;extra=extra||out;if(out.stops)stops=stops.concat(out.stops);await sleep(120);if(me.abort)return;}
+    lang=plan.ansLang||LANG;text=(stops.length&&plan.lead)?plan.lead:(plan.ans[lang]||plan.ans.en);
+  }
+  stops=stops.slice(0,3);
+  me.done=true;
+  const ok=await agentSpeak(text,lang);
+  if(!ok)return;
+  const a=$('#answer');
+  if(extra&&extra.link){const l=document.createElement('a');l.className='more';l.href=extra.link[0];l.target='_blank';l.rel='noopener';l.textContent=T(extra.link[1]);a.appendChild(l);}
+  if(stops.length)await guideTour(stops,lang,me);
+}
+$('#askForm').addEventListener('submit',e=>{e.preventDefault();const v=$('#askInput').value;if(!v.trim())return;$('#askInput').value='';ask(v);});
+$('#askInput').addEventListener('input',e=>{if(e.target.value)userActivity();});
+function brainLabel(extraNote){const s=$('#brainStatus');const live=!!CONFIG.endpoint;s.innerHTML=(live?T({en:'brain: <b>live model</b> via your proxy',zh:'大脑：<b>真模型</b>（经代理）'}):T({en:'brain: <b>offline rules</b>. Connect a model to go live.',zh:'大脑：<b>离线规则</b>。接上模型即可上线。'}))+(extraNote?` <span>${esc(extraNote)}</span>`:'');}
+
+/* ---------- chips ---------- */
+const CHIPS=[
+ {en:'Full-duplex papers',zh:'全双工论文'},
+ {en:'What did Yuxin do at StepFun?',zh:'Yuxin 在 StepFun 做了什么？'},
+ {en:'Does Yuxin build ASR and TTS?',zh:'Yuxin 做 ASR 和 TTS 吗？'},
+ {en:'Clinical speech work',zh:'临床语音研究'},
+ {en:'How do I reach Yuxin?',zh:'怎么联系 Yuxin？'},
+];
+function renderChips(){$('#chips').innerHTML=CHIPS.map(c=>`<button type="button" class="chip">${esc(T(c))}</button>`).join('');}
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;ask(b.textContent);});
+
+/* ---------- initial state: the box is never empty ---------- */
+function seedAnswer(){$('#answer').innerHTML=`<span class="txt">${esc(PROFILE[LANG])}</span>`;}
+document.addEventListener('visibilitychange',()=>{if(document.hidden){try{speechSynthesis.cancel();}catch(e){}if(audioEl){try{audioEl.pause();}catch(e){}}}});
+
+/* ---------- click any paper or role: the guide walks there and sums it up ---------- */
+function lineFor(el){const id=el.id||'';
+  if(id.startsWith('p-')){const p=PAPERS.find(x=>x.id===id.slice(2));return p&&p.one;}
+  if(id.startsWith('w-')){const w=WORK.find(x=>x.id===id.slice(2));return w&&w.one;}
+  if(id.startsWith('e-')){const e=EDU.find(x=>x.id===id.slice(2));return e&&e.one;}
+  return null;}
+async function guideTo(el){
+  const line=lineFor(el);if(!line)return;
+  cutAgent(true);
+  const me={abort:false,done:true};asking=me;
+  await guideTour([{sel:'#'+el.id,line}],LANG,me);
+}
+for(const sel of ['#pubGroups','#xpList','#eduList']){
+  $(sel).addEventListener('click',e=>{if(e.target.closest('a,button,video,.vid'))return;const el=e.target.closest('.pub,.xp li');if(el&&el.id)guideTo(el);});
+}
+
+/* ---------- notes under the box ---------- */
+function note(s){const n=$('#note');n.textContent=s;n.hidden=!s;}
+
+/* ---------- the guide: a small figure that walks to what the agent talks about ---------- */
+const guide=$('#guide'),bubble=guide.querySelector('.bubble');let guideTarget=null,guideHide=0;
+function placeGuide(el){
+  const r=el.getBoundingClientRect();const pageX=r.left+scrollX,pageY=r.top+scrollY;
+  const narrow=innerWidth<720;
+  let x,y;
+  if(narrow){x=pageX;y=pageY-56;guide.classList.remove('flip');}
+  else if(r.left>=64){x=pageX-56;y=pageY+6;guide.classList.remove('flip');}
+  else{x=pageX+r.width+12;y=pageY+6;guide.classList.add('flip');}
+  guide.style.transform=`translate(${Math.round(x)}px,${Math.round(y)}px)`;
+}
+function guideShow(el){
+  const far=guide.hidden||!guideTarget||Math.abs(el.getBoundingClientRect().top-guideTarget.getBoundingClientRect().top)>1400;
+  guideTarget=el;
+  if(far){guide.style.transition='none';guide.hidden=false;placeGuide(el);const m=/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/.exec(guide.style.transform);if(m)guide.style.transform=`translate(${m[1]}px,${(+m[2])-140}px)`;guide.style.opacity='0';void guide.offsetWidth;guide.style.transition='';guide.style.opacity='';}
+  guide.hidden=false;placeGuide(el);guide.classList.remove('hop');void guide.offsetWidth;guide.classList.add('hop');
+}
+function guideStop(){clearTimeout(guideHide);bubble.hidden=true;bubble.querySelector('.txt').textContent='';if(guideTarget){guideTarget.classList.remove('hit');}}
+async function guideTour(stops,lang,me){
+  for(let i=0;i<stops.length;i++){
+    const st=stops[i];const el=$(st.sel);if(!el)continue;
+    if(guideTarget)guideTarget.classList.remove('hit');
+    const rc=el.getBoundingClientRect();const inView=rc.top>=90&&rc.bottom<=innerHeight-40;
+    if(!inView){const top=rc.top+scrollY-Math.max(120,innerHeight*0.3);if(!RM)scrollTo({top,behavior:'smooth'});else scrollTo(0,top);await sleep(RM?0:520);if(me.abort)return;}
+    el.classList.add('hit');guideShow(el);
+    await sleep(RM?0:380);if(me.abort)return;
+    bubble.hidden=false;
+    const ok=await agentSpeak(st.line,lang,bubble);
+    if(!ok||me.abort)return;
+    await sleep(i<stops.length-1?900:0);if(me.abort)return;
+  }
+  clearTimeout(guideHide);guideHide=setTimeout(()=>{bubble.hidden=true;if(guideTarget)guideTarget.classList.remove('hit');},9000);
+}
+addEventListener('resize',()=>{if(guideTarget&&!guide.hidden)placeGuide(guideTarget);});
+
+/* ---------- sound: read answers aloud ---------- */
+function soundLabel(){$('#soundBtn').textContent=SOUND?T({en:'Turn sound off',zh:'关闭声音'}):T({en:'Turn sound on',zh:'打开声音'});$('#soundBtn').setAttribute('aria-pressed',String(SOUND));}
+function loadVoices(){return new Promise(res=>{try{const v=speechSynthesis.getVoices();if(v.length)return res(v);let done=false;speechSynthesis.onvoiceschanged=()=>{if(done)return;done=true;res(speechSynthesis.getVoices());};setTimeout(()=>{if(!done){done=true;res(speechSynthesis.getVoices());}},1200);}catch(e){res([]);}});}
+function say(text){try{const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=1.03;u.pitch=1.08;const v=pickVoice('en-US');if(v)u.voice=v;speechSynthesis.speak(u);}catch(e){}}
+$('#soundBtn').addEventListener('click',async()=>{
+  if(!('speechSynthesis' in window)&&!CONFIG.remoteTTS){note(T({en:'This browser has no speech synthesis.',zh:'此浏览器没有语音合成。'}));return;}
+  SOUND=!SOUND;soundLabel();
+  if(!SOUND){try{speechSynthesis.cancel();}catch(e){}if(audioEl){try{audioEl.pause();}catch(e){}audioEl=null;}note('');return;}
+  if(CONFIG.remoteTTS&&CONFIG.endpoint){note(T({en:'Sound on. Answers are read aloud; start typing while it speaks and it stops mid-word.',zh:'声音已开。回答会朗读；它说话时你打字它会停下。'}));return;}
+  const voices=await loadVoices();
+  if(!voices.length){note(T({en:'Sound is on, but this browser reports no system voices, so nothing will be heard. Chrome on Linux needs speech-dispatcher; Chrome, Edge or Safari on macOS or Windows work out of the box.',zh:'声音已开，但此浏览器没有系统语音，不会有声音。'}));return;}
+  note(T({en:'Sound on. Answers are read aloud; start typing while it speaks and it stops mid-word.',zh:'声音已开。回答会朗读；它说话时你打字它会停下。'}));
+  say('Sound on.');
+});
+
+/* ---------- copy ---------- */
+$('#copyBtn').addEventListener('click',async()=>{const b=$('#copyBtn'),m=$('#mail').textContent;try{await navigator.clipboard.writeText(m);b.textContent=T({en:'Copied',zh:'已复制'});}catch(e){const r=document.createRange();r.selectNodeContents($('#mail'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent=T({en:'Selected',zh:'已选中'});}setTimeout(()=>{b.textContent=T({en:'Copy',zh:'复制'});},1400);});
+
+/* ---------- boot ---------- */
+renderAll();
+seedAnswer();
+try{speechSynthesis.getVoices();}catch(e){}
+})();
+</script>
+
+</body>
+</html>

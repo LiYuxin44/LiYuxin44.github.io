@@ -1,0 +1,5 @@
+# Not for the public Pages repo: backend proxy and setup notes.
+deploy/
+# artifact-preview fragment, index.html is the page
+site.html
+*.v*.html
